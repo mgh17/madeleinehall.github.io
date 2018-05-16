@@ -2858,27 +2858,28 @@
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #6fc3df;
+				/* background-color: #6fc3df; */
+				background-color: #073D8C;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+				background-color: #D65FAD;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+				background-color: #797DC9;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+				background-color: #B884E0;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+				background-color: #7CBEE0;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				background-color: #40D6AD;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3286,27 +3287,28 @@
 		}
 
 			#header.alt.style1 .logo strong {
-				color: #6fc3df;
+				/* color: #6fc3df; */
+				color: #073D8C;
 			}
 
 			#header.alt.style2 .logo strong {
-				color: #8d82c4;
+				color: #D65FAD;
 			}
 
 			#header.alt.style3 .logo strong {
-				color: #ec8d81;
+				color: #797DC9;
 			}
 
 			#header.alt.style4 .logo strong {
-				color: #e7b788;
+				color: #B884E0;
 			}
 
 			#header.alt.style5 .logo strong {
-				color: #8ea9e8;
+				color: #7CBEE0;
 			}
 
 			#header.alt.style6 .logo strong {
-				color: #87c5a4;
+				color: #40D6AD;
 			}
 
 		body.is-loading #header.alt {
@@ -3521,27 +3523,28 @@
 			}
 
 		#banner.style1:after {
-			background-color: #6fc3df;
+			/* background-color: #6fc3df; */
+			background-color: #073D8C;
 		}
 
 		#banner.style2:after {
-			background-color: #8d82c4;
+			background-color: #D65FAD;
 		}
 
 		#banner.style3:after {
-			background-color: #ec8d81;
+			background-color: #797DC9;
 		}
 
 		#banner.style4:after {
-			background-color: #e7b788;
+			background-color: #B884E0;
 		}
 
 		#banner.style5:after {
-			background-color: #8ea9e8;
+			background-color: #7CBEE0;
 		}
 
 		#banner.style6:after {
-			background-color: #87c5a4;
+			background-color: #40D6AD;
 		}
 
 		body.is-loading #banner:after {
