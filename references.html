@@ -13,6 +13,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			});
+		</script>
+		<script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+
 	</head>
 	<body>
 
@@ -57,8 +67,11 @@
 									</header>
 									<!-- <span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
 									<ol>
+										<li><a href="http://hemberg-lab.github.io/scRNA.seq.course/index.html" target="_blank"> Kiselev, Vladimir, et al. "Analysis of single cell RNA-seq data." Hemberg Group | Wellcome Sanger Institute (2018).</a></li>
 										<li><a href="https://www.degruyter.com/view/j/sagmb.2007.6.issue-1/sagmb.2007.6.1.1253/sagmb.2007.6.1.1253.xml" target="_blank">Lalam, Nadia. "Statistical inference for quantitative polymerase chain reaction using a hidden Markov model: a Bayesian approach." Statistical applications in genetics and molecular biology 6.1 (2007).</a></li>
-										<li>Another reference.</li>
+										<li><a href="https://www.nature.com/articles/nrg3966" target="_blank">Stewart, James B., and Patrick F. Chinnery. "The dynamics of mitochondrial DNA heteroplasmy: implications for human health and disease." Nature Reviews Genetics 16.9 (2015): 530.</a></li>
+										<li><a href="http://www.nature.com/articles/nmeth.1315" target="_blank">Tang, Fuchou, et al. "mRNA-Seq whole-transcriptome analysis of a single cell." Nature methods 6.5 (2009): 377.</a></li>
+										<li><a href="https://www.biorxiv.org/content/early/2017/07/09/161356" target="_blank">Yuan, Yuan, et al. "Comprehensive Molecular Characterization of Mitochondrial Genomes in Human Cancers." bioRxiv (2017): 161356.</a></li>
 									</ol>
 
 								</div>
@@ -73,7 +86,7 @@
 									<dl>
 										<dt><h3>Heteroplasmy:</h3></dt>
 										<dd>
-											<p>The presence of more than one type of organellar genome (mitochondrial DNA or plastid DNA) within a cell or individual. It can be expressed as a ratio m/(w+m), with m the number of mutant DNA molecules present, and w the number of wildtype.</p>
+											<p>The presence of more than one type of organellar genome (mitochondrial DNA or plastid DNA) within a cell or individual. It can be expressed as a ratio $m/(w+m)$, with $m$ the number of mutant DNA molecules present, and $w$ the number of wildtype.</p>
 										</dd>
 										<dt><h3>Wildtype:</h3></dt>
 										<dd>

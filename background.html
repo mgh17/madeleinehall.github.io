@@ -13,6 +13,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" async
+  	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			});
+		</script>
+		<script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+
 	</head>
 	<body>
 
@@ -60,6 +70,7 @@
 								<p>...<br />
 								...</p>
 							</div> -->
+
 						</div>
 					</section>
 
@@ -70,56 +81,74 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>What is mtDNA</h2>
+										<h2>Mitochondrial DNA</h2>
 									</header>
-									<p>...</p>
+									<p>Mitochondrial DNA (mtDNA) is a closed, double-stranded DNA circle located in mitochondria, where it exists on the scale of hundreds of thousands of copies in an individual. It encodes a number of essential mitochondrial proteins, as well as molecules necessary for intramitochondrial translation. As a result of its unique maternal inheritance pattern and relatively high mutation rate, mtDNA is often used in evolutionary biology and population genetics studies.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
+									<div class="image" style="width: 400px; background-color:gray; margin-left: 50px">
+										<img src="images/Map_of_the_human_mitochondrial_genome.svg" alt="" data-position="center center" />
+										<p style="margin-left: 10px; margin-top: 20px">Figure: Map of the human mitochondrial genome. This picture is a work by <a href="https://commons.wikimedia.org/wiki/User:Manudouz" target="_blank">Emmanuel Douzery.</a></p>
+
+									</div>
+
 									<div class="content">
 										<div class="inner">
+
 											<header class="major">
-												<h3>What is heteroplasmy</h3>
+												<h3>Heteroplasmy</h3>
 											</header>
-											<p>...</p>
+											<p>Heteroplasmy is the presence of more than one type of organellar genome within a cell or individual. Mutations that occur during replication result in heteroplasmy. It can be described by a ratio $m/(w+m)$, with $m$ denoting the number of mutant DNA molecules present, and $w$ the number of wildtype (non-mutant) molecules. In the context of this study, heteroplasmy refers to the presence of more than one form of mtDNA in a cell.
+
+
+
+											</p>
+											<p>Heteroplasmy is not always harmful, however it has been shown that heteroplasmic mutations of mitochondrial DNA (mtDNA) are an important source of human diseases. A biochemical threshold exists, such that a functional defect occurs only above a certain level of heteroplasmy (e.g. $h = m/(w+m) \geq 0.8$ results in a defect).</p>
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
+
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
+									<div class="image" style="width: 500px;margin-right: 50px;background-color:gray">
+										<img src="images/het_thresh.pdf" alt="" data-position="center center" />
+										<p style="margin-right: 10px; margin-left: 10px;margin-top: 20px">Figure: Heteroplasmy as a result of replication, and the existence of a biochemical threshold <a href="references.html">(Stewart and Chinnery, 2015)</a>.</p>
+
+									</div>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Why study mtDNA and heteroplasmy</h3>
+												<h3>Motivation</h3>
 											</header>
-											<p>Disease (age-related e.g. Parkinsons)</p>
+
+											<p>mtDNA mutations contribute to human disease across a range of severity. Rare, highly penetrant mutations often affect the nervous system, muscles, heart and endocrine organs, whereas mutations that have a milder contribution can result in common complex traits and late-onset disorders <a href="references.html">(Stewart and Chinnery, 2015)</a>.
+											Furthermore, similar mutational signatures have been observed across cancer types, with mtDNA copy number showing variations within and across cancers in correlation with clinical variables <a href="references.html">(Yuan et al., 2017)</a>.
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
+									The ability to quantify heteroplasmy in mtDNA is therefore key in studying age-related disease, cancers, and other health issues. </p>
+
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+									<a class="image">
+										<img src="images/pic01.jpg" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
 												<h3>Previous work and attempts</h3>
 											</header>
+											<p>Quantitative analysis of mtDNA is challenging in both experimental and computational aspects. Single cell data by nature is concerned with small numbers of molecules. These low copy numbers result in stochasticity, adding complexity to the task of analysis. </p>
 											<p>Delta delta ct method. DD work.</p>
+											<p>Two different approaches to quantification arise from two types of data: scRNAseq (single-cell RNA sequencing) data, and fluorescence data from qPCR (quantitative PCR).</p>
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
@@ -132,9 +161,22 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Use of scRNAseq data</h2>
+										<h2>scRNAseq data</h2>
 									</header>
+									<p> New technology (first published by <a href = "references.html">Tang et al. in 2009 </a>) allows genome-wide transcriptome data to be obtained from single cells, with the use of high-throughput sequencing (scRNAseq).</p>
 									<p>... ... ... ... This is one approach. However, the bulk of this study concerns the use of qPCR data for quantification of heteroplasmy in mtDNA.</p>
+									<!-- <ul class="actions">
+										<li><a href="generic.html" class="button next">Get Started</a></li>
+									</ul> -->
+								</div>
+							</section>
+
+							<section id="four">
+								<div class="inner">
+									<header class="major">
+										<h2>qPCR data</h2>
+									</header>
+									<p> QPCR mtDNA.</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
@@ -225,7 +267,8 @@
 
 							</div>
 							<ul class="copyright">
-							<li style="margin-left: 40px">banner via: <a href="https://goo.gl/kUcYye">https://goo.gl/kUcYye</li></p>
+							<li style="margin-left: 40px">banner via: <a href="https://goo.gl/kUcYye" target="_blank">https://goo.gl/kUcYye</a></li>
+
 							</ul>
 						</footer>
 
