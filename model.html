@@ -80,7 +80,7 @@
 									<header class="major">
 										<h2>qPCR</h2>
 									</header>
-									<p>The qPCR amplification process is stochastic. The process is not completely efficient, it is not the case that each mtDNA molecule is duplicated per cycle. A binomial branching process describes the progression of amplification, and a relationship exists between the number of molecules present and the fluorescence measurement, giving rise to a Hidden Markov Model. </p>
+									<p>The qPCR amplification process is stochastic. The process is not completely efficient, it is not the case that each mtDNA molecule is duplicated per cycle. A binomial branching process describes the progression of amplification, and a relationship exists between the number of molecules present and the fluorescence measurement, giving rise to a Hidden Markov Model (HMM). </p>
 								</div>
 								<div>
 									<center>
@@ -135,9 +135,10 @@
 																<div class="content">
 																	<div class="inner">
 																		<header class="major">
-																			<h3>Forward simulated process</h3>
+																			<h3>Forward Simulation</h3>
 																		</header>
-																		<p>...</p>
+																		<p>We can implement the above model to visualise the exponential amplification of the molecules. Due to stochasticity, a family of curves can be created for one single initial state (a fixed $X_0$, $r$). Repeatedly simulating an initial condition generates a family of curves and allows us to obtain a confidence interval for a particular combination of $X_0$ and $r$.
+</p>
 																		<!-- <ul class="actions">
 																			<li><a href="generic.html" class="button">Learn more</a></li>
 																		</ul> -->
@@ -150,10 +151,8 @@
 																</a>
 																<div class="content">
 																	<div class="inner">
-																		<header class="major">
-																			<h3>Forward Simulated Process</h3>
-																		</header>
-																		<p>...</p>
+
+																		<p>The smaller the efficiency $r$, the wider this confidence interval is, meaning there is less certainty of the number of molecules present after a number of cycles. Certainty decreases with each round of qPCR. This can be demonstrated by calculating the coefficient of variation between simulations for varying $X_0$ and $r$ (see Figure ref heatmap).</p>
 																		<!-- <ul class="actions">
 																			<li><a href="generic.html" class="button">Learn more</a></li>
 																		</ul> -->
@@ -166,7 +165,7 @@
 														<section id="three">
 															<div class="inner">
 																<header class="major">
-																	<h2>Trade off between efficiency and r?</h2>
+																	<h2>...</h2>
 																</header>
 																<p>...</p>
 																<!-- <ul class="actions">
