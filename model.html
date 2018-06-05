@@ -78,9 +78,15 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>What is qPCR</h2>
+										<h2>qPCR</h2>
 									</header>
-									<p>what is it. what's the data. what's the model.</p>
+									<p>The qPCR amplification process is stochastic. The process is not completely efficient, it is not the case that each mtDNA molecule is duplicated per cycle. A binomial branching process describes the progression of amplification, and a relationship exists between the number of molecules present and the fluorescence measurement, giving rise to a Hidden Markov Model. </p>
+								</div>
+								<div>
+									<center>
+										<img src="images/efficiency.png" alt="" data-position="center center" style="width:600px"/>
+										<p>Figure: </p>
+									</center>
 								</div>
 							</section>
 
@@ -89,17 +95,33 @@
 
 														<section id="two" class="spotlights">
 															<section>
-																<a class="image" style="margin-left: 10px; width:700px">
-																	<img src="images/hmm_noback.png" alt="" data-position="center center" />
+																<div style="margin-left: 10px;margin-top:150px">
+																	<img src="images/hmm_noback.png" alt="" data-position="center center" style="width:600px"/>
 																	Figure: A binomial branching process describes the hidden markov model for qPCR. The $X_i$ are the number of molecules after each round of qPCR and are 'hidden' states. The $F_i$ are the fluorescence reads and are 'observed' states. Parameters to be inferred are highlighted in red.
-																</a>
+																</div>
 																<div class="content">
 																	<div class="inner">
 																		<header class="major">
 																			<h3>Hidden Markov Model</h3>
 																		</header>
-																		<p>...</p>
-																		<p>$X_{i+1} = X_i + B(X_i,r)$, $\qquad$ $F_i = \alpha X_i + N(0,\sigma^2)$.</p>
+																		<div style="margin-right:30px"
+
+																		<a href="references.html">Lalam, 2007</a> proposes a binomial branching process combined with a HMM. It accounts for the fact that the number of replicated DNA molecules during qPCR is random, and additionally that the measurement of the fluorescence emitted by the DNA molecules is collected with some random error.
+
+																		<p>
+																			For all $i\geq1$:
+
+																		$$X_{i+1} = X_i + B(X_i,r), \qquad F_i = \alpha X_i + N(0,\sigma^2)$$
+																		where $X_i$ is the number of molecules and $F_i$ is the measured fluorescence at cycle $i$. Fluoresence reads are taken in the presence of background fluorescence, modelled as additive Gaussian noise with mean $0$ and variance $\sigma^2$. If the experimental data used for inference is not background corrected, a different mean and variance is required.
+																	</p>
+																		<p>Parameters we wish to infer are:</p>
+																		<ul>
+																			<li>$X_0$: the initial number of molecules</li>
+																			<li>$r$: the efficiency of the qPCR experiment</li>
+																			<li>$\alpha$: the constant describing the proportionality of the fluorescence intensity emitted at a given cycle to the number of molecules at that point</li>
+																			<li>$\sigma$: the variance contributing to the noise term in the fluorescence expression
+																		</ul>
+																	</div>
 																		<!-- <ul class="actions">
 																			<li><a href="generic.html" class="button">Learn more</a></li>
 																		</ul> -->
@@ -113,7 +135,7 @@
 																<div class="content">
 																	<div class="inner">
 																		<header class="major">
-																			<h3>Binomial Branching Process</h3>
+																			<h3>Forward simulated process</h3>
 																		</header>
 																		<p>...</p>
 																		<!-- <ul class="actions">

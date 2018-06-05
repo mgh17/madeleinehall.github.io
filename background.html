@@ -197,11 +197,32 @@
 										<h2>qPCR data</h2>
 									</header>
 									<p> mtDNA in single cells is present in too low a quantity to be measured and analysed directly. Therefore qPCR is required. qPCR is an experimental technique that amplifies the quantity of a DNA segment, allowing more of the molecule to be available for experimental analysis. It involves repeatedly heating and cooling DNA segments whilst mixing with free nucleotides. Molecule numbers are progressively amplified, and a fluorescence measurement can be obtained for each cycle. This fluorescence measurement indicates the number of molecules present at that point.</p>
+									<center>
+										<img src="images/pcr.png" alt="" data-position="center center" style="width: 650px"/>
+										<p>Figure: A simple representation of PCR. At each cycle a DNA molecule is denatured, mixed with primers (red) and free nucleotides (yellow) to form two new DNA strands. The process is 'semi-conservative', as each new DNA molecule consists of one new strand and one original strand that served as the template. After $n$ cycles, one DNA molecule yeilds $2^n$ replicates. This picture is adapted from work by <a href="https://www.khanacademy.org/science/biology/biotech-dna-technology/dna-sequencing-pcr-electrophoresis/a/polymerase-chain-reaction-pcr" target="_blank">Khan Academy</a>.</p>
+									</center>
+								</section>
+								<section class="spotlights">
+									<section>
+										<div style="width:350px;margin-left: 20px;margin-top: 10px">
+											<center>
+											<img src="images/het_qpcr.png" alt="" data-position="center center" style="width: 350px"/>
+											<p>Figure: Cell contents are split into two wells, such that half of the contents can be measured with qPCR detecting only mutant mtDNA, and the other half measured with qPCR detecting all mtDNA molecules. </p>
+										</center>
+									</div>
+									<div style="margin-top:20px;margin-left:50px;margin-right:20px">
 									<p>Heteroplasmy can be quantified by partitioning mtDNA molecules obtained from a single cell into halves, and performing qPCR on each partition. We can measure the amount of mtDNA present in one partition. In the second partition, we can measure the amount of only the mutated mtDNA present. The ratio of these measurements tells us the level of heteroplasmy.  </p>
 									<p>For equivalent amounts of mtDNA, a family of ampilification curves (see Model) could be generated which would feasibly occur, meaning there is error in qPCR.
-</p>
-<p>The standard curve method (ref) has been used extensively to calculate copy number from qPCR data. A series of amplification curves from known parameters are generated, and then compared to amplification curves created from experimentation. This method is simple and effective at yielding approximations to parameters of interest. However, a more sophisticated approach implements Bayesian techniques for parameter inference (see more in Inference).  Another method, the delta-delta ct method, is used in order to calculate the relative fold gene expression of samples from qPCR.
-</p>
+									</p>
+									<p>The standard curve method (ref) has been used extensively to calculate copy number from qPCR data. A series of amplification curves from known parameters are generated, and then compared to amplification curves created from experimentation. This method is simple and effective at yielding approximations to parameters of interest. However, a more sophisticated approach implements Bayesian techniques for parameter inference (see more in Inference).  Another method, the delta-delta ct method, is used in order to calculate the relative fold gene expression of samples from qPCR.
+									</p>
+</div>
+								</section>
+
+							</section>
+									<section>
+										<div class="inner">
+									<p>...</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
