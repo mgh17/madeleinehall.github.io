@@ -13,6 +13,24 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	    extensions: ["tex2jax.js"],
+	    jax: ["input/TeX", "output/HTML-CSS"],
+	    tex2jax: {
+	      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+	      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+	      processEscapes: true
+	    },
+	    "HTML-CSS": { fonts: ["TeX"] }
+	  });
+	</script>
+		<script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+
 	</head>
 	<body>
 
@@ -87,7 +105,20 @@
 																									<header class="major">
 																										<h3>Metropolis Hastings Algorithm</h3>
 																									</header>
-																									<p>...</p>
+																									<p>
+																										<ol>
+																										<li> Start with $\theta^{(0)}$, $t=0$ </li>
+																										<li> Propose $\theta′$ according to a transition kernel $q(\theta′|\theta^{(t)})$ </li>
+																										<li> Calculate acceptance ratio $$\alpha = \textrm{min}\left( 1, \frac{p(D|\theta′)p(\theta′)q(\theta^{(t)}|\theta′)}{p(D|\theta^{(t)})p(\theta^{(t)})q(\theta′|\theta^{(t)})}\right)$$</li>
+																										<li> Accept $\theta’$ with probability $\alpha$
+																										<ul>
+																										<li>If accepted, set $\theta^{(t+1)} = \theta’$</li>
+																										<li>If rejected, set $\theta^{(t+1)} = \theta^{(t)}$</li>
+																										</ul>
+																										$t = t+1$. Return to step 2.
+																										</li>
+																										</ol>
+																								 </p>
 																									<!-- <ul class="actions">
 																										<li><a href="generic.html" class="button">Learn more</a></li>
 																									</ul> -->

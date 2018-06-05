@@ -85,16 +85,26 @@
 									</header>
 									<p>Mitochondrial DNA (mtDNA) is a closed, double-stranded DNA circle located in mitochondria, where it exists on the scale of hundreds of thousands of copies in an individual. It encodes a number of essential mitochondrial proteins, as well as molecules necessary for intramitochondrial translation. As a result of its unique maternal inheritance pattern and relatively high mutation rate, mtDNA is often used in evolutionary biology and population genetics studies.</p>
 								</div>
+								<!-- <div>
+									<center>
+
+
+									<img src="images/image.png" alt="" data-position="center center" style="width:330px" />
+									<p style="margin-top: 0px">Figure: Map of the human mitochondrial genome. This picture is adapted from work by <a href="https://commons.wikimedia.org/wiki/User:Manudouz" target="_blank">Emmanuel Douzery.</a></p>
+								</center>
+
+
+								</div> -->
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<div style="width: 400px; margin-left: 50px">
+									<div style="width: 520px; margin-left: 0px">
 
 
-										<img src="images/image.png" alt="" data-position="center center" style="width:400px" />
-										<p style="margin-left: 10px; margin-top: 20px">Figure: Map of the human mitochondrial genome. This picture is adapted from work by <a href="https://commons.wikimedia.org/wiki/User:Manudouz" target="_blank">Emmanuel Douzery.</a></p>
+										<img src="images/het_thresh_noback.png" alt="" data-position="center center" style="width:520px" />
+										<p style="margin-left: 10px; margin-top: 20px">Figure: Heteroplasmy as a result of replication, and the existence of a biochemical threshold. Figure adapted from <a href="references.html">(Stewart and Chinnery, 2015)</a>.</p>
 
 
 									</div>
@@ -120,9 +130,12 @@
 									</div>
 								</section>
 								<section>
-									<div style="width: 500px;margin-right: 50px">
-										<img src="images/het_thresh.pdf" alt="" data-position="center center" style="width: 500px"/>
-										<p style="margin-right: 10px; margin-left: 10px;margin-top: 20px">Figure: Heteroplasmy as a result of replication, and the existence of a biochemical threshold <a href="references.html">(Stewart and Chinnery, 2015)</a>.</p>
+									<div style="width:800px;margin-right: 0px">
+										<center>
+										<img src="images/mtdna.png" alt="" data-position="center center" style="width: 500px"/>
+										<img src="images/mtdna_dis.png" alt="" data-position="center center" style="width: 450px"/>
+									</center>
+										<p style="margin-right: 10px; margin-left: 10px;margin-top: 20px">Figure: Structure of the human mitochondrial genome, and corresponding connections with several human diseases. This picture is adapted from work by <a href="https://commons.wikimedia.org/wiki/User:Shanel" target="_blank">Shanel Kalicharan</a>.</p>
 
 									</div>
 									<div class="content">
@@ -137,28 +150,30 @@
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
 									The ability to quantify heteroplasmy in mtDNA is therefore key in studying age-related disease, cancers, and other health issues. </p>
+									<p>Quantitative analysis of mtDNA is challenging in both experimental and computational aspects. Single cell data by nature is concerned with small numbers of molecules. These low copy numbers result in stochasticity, adding complexity to the task of analysis. </p>
+
+									<p>Two different approaches to quantification arise from two types of data: scRNAseq (single-cell RNA sequencing) data, and fluorescence data from qPCR (quantitative PCR).</p>
+
 
 										</div>
 									</div>
 								</section>
-								<section>
+								<!-- <section>
 									<a class="image">
 										<img src="images/pic01.jpg" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Previous work and attempts</h3>
+												<h3>Quantification & Analysis</h3>
 											</header>
-											<p>Quantitative analysis of mtDNA is challenging in both experimental and computational aspects. Single cell data by nature is concerned with small numbers of molecules. These low copy numbers result in stochasticity, adding complexity to the task of analysis. </p>
 											<p>Delta delta ct method. DD work.</p>
-											<p>Two different approaches to quantification arise from two types of data: scRNAseq (single-cell RNA sequencing) data, and fluorescence data from qPCR (quantitative PCR).</p>
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
-										</div>
+										<!-- </div>
 									</div>
-								</section>
+								</section> -->
 							</section>
 
 						<!-- Three -->
@@ -167,7 +182,8 @@
 									<header class="major">
 										<h2>scRNAseq data</h2>
 									</header>
-									<p> New technology (first published by <a href = references.html>Tang et al. in 2009 </a>) allows genome-wide transcriptome data to be obtained from single cells, through the use of high-throughput sequencing (scRNAseq). Across a population of cells, the distribution of expression levels for each gene are obtained. In the context of mtDNA, </p>
+									<p> New technology (first published by <a href = references.html>Tang et al. in 2009 </a>) allows genome-wide transcriptome data to be obtained from single cells, through the use of high-throughput sequencing (scRNAseq). Across a population of cells, the distribution of expression levels for each gene are obtained.</p>
+									<p><a href="references.html">Hemberg group</a> ... course on scRNAseq...</p>
 									<p>... ... ... ... This is one approach. However, the bulk of this study concerns the use of qPCR data for quantification of heteroplasmy in mtDNA.</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
@@ -182,6 +198,10 @@
 									</header>
 									<p> mtDNA in single cells is present in too low a quantity to be measured and analysed directly. Therefore qPCR is required. qPCR is an experimental technique that amplifies the quantity of a DNA segment, allowing more of the molecule to be available for experimental analysis. It involves repeatedly heating and cooling DNA segments whilst mixing with free nucleotides. Molecule numbers are progressively amplified, and a fluorescence measurement can be obtained for each cycle. This fluorescence measurement indicates the number of molecules present at that point.</p>
 									<p>Heteroplasmy can be quantified by partitioning mtDNA molecules obtained from a single cell into halves, and performing qPCR on each partition. We can measure the amount of mtDNA present in one partition. In the second partition, we can measure the amount of only the mutated mtDNA present. The ratio of these measurements tells us the level of heteroplasmy.  </p>
+									<p>For equivalent amounts of mtDNA, a family of ampilification curves (see Model) could be generated which would feasibly occur, meaning there is error in qPCR.
+</p>
+<p>The standard curve method (ref) has been used extensively to calculate copy number from qPCR data. A series of amplification curves from known parameters are generated, and then compared to amplification curves created from experimentation. This method is simple and effective at yielding approximations to parameters of interest. However, a more sophisticated approach implements Bayesian techniques for parameter inference (see more in Inference).  Another method, the delta-delta ct method, is used in order to calculate the relative fold gene expression of samples from qPCR.
+</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
