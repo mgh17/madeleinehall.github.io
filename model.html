@@ -303,7 +303,44 @@
 																<!-- <ul class="actions">
 																	<li><a href="generic.html" class="button next">Get Started</a></li>
 																</ul> -->
+																<div id="exp_phase"><!-- Plotly chart will be drawn inside this DIV -->
+															  <script>
+																var trace1 = {
+
+																	x: [35,36,37,38,39,40,41,42,43,44],
+																	y: [55.45563,	84.45778	,113.788086,	140.14575,	159.53291	,173.48251,	182.1414	,189.41588,	195.12259,	200.0211,	205.79031],
+																	type: 'scatter',
+																	mode:'lines',
+																	name: 'post-exponential phase'
+																	};
+																	var trace2 = {x: [1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35],
+																	 y: [-2.9843912,	-3.500936,	-3.0409336,	-3.1643357,	-2.7622252,	-2.7776258,	-2.375027,	-2.4586647,	-1.8583272	,-1.587549,	-1.2040541,	-1.0458095,	-1.2144692	,-0.824642	,-0.41247588,	-0.48210606	,-0.45844397,	-0.21189678,	0.034055337	,0.041924562,	-0.02901786,	-0.15696712,	-0.052326653,	0.28021908,	-0.11332465	,0.061460465,	0.5802092,	0.3371324,	0.7466435	,2.1853447,	4.4825053	,9.235721	,17.086393,	32.21566	,55.45563] ,
+																	type: 'scatter',
+																	name:'exponential phase'
+
+																	}
+
+																	var data = [trace1,trace2];
+																	var layout = {
+																	title:'qPCR amplification curve <br> well 253, single-cell qPCR mtDNA experiment 10-3-17',
+																	xaxis: {
+																		title: 'Cycle number',
+																		showgrid: true,
+																		zeroline: false
+																	},
+																	yaxis: {
+																		title: 'Fluorescence measure',
+																		showline: true
+																	}
+																	};
+																	Plotly.newPlot('exp_phase', data,layout);
+															  </script>
+																<center>
+																<p style="margin-top:10px">Figure:</p>
+															</center>
 															</div>
+															</div>
+
 
 															<!-- <div id="myDiv" style="width: 100%; height: 500px;"></div>
 															<script>
