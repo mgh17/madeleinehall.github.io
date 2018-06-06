@@ -107,7 +107,7 @@
 																		<header class="major">
 																			<h3>Hidden Markov Model</h3>
 																		</header>
-																		<div style="margin-right:30px">
+																		<div style="margin-right:0px">
 
 																		<a href="references.html#lalam">Lalam, 2007</a> proposes a binomial branching process combined with a HMM. It accounts for the fact that the number of replicated DNA molecules during qPCR is random, and additionally that the measurement of the fluorescence emitted by the DNA molecules is collected with some random error.
 
@@ -131,15 +131,103 @@
 																	</div>
 																</div>
 															</section>
+															<!-- <section>
+																<div id="myDiv"></div>
+												        <script>
+																var trace1 = {
+																  x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+																  y: [50.0, 74.95, 116.95, 184.0, 291.0, 465.95, 744.0, 1186.9499999999998, 1894.95, 3023.0, 4844.0, 7742.6, 12391.95, 19828.949999999997, 31782.75, 50789.2, 81213.45, 129806.45, 207796.6, 332322.7, 531313.65, 850083.8, 1360470.4, 2175907.2, 3481695.1999999997, 5571200.050000001, 8914055.65, 14264394.85, 22821681.950000003, 36512870.95, 58423810.85],
+																  line: {width: 0},
+																  marker: {color: "444"},
+																  mode: "lines",
+																  name: "5%",
+																  type: "scatter"
+																};
+																var trace2 = {
+																   x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+																   y: [50.0, 79.982, 128.176, 205.029, 327.914, 524.953, 839.757, 1343.638, 2149.538, 3437.077, 5498.262, 8797.505, 14075.599, 22518.673, 36028.401, 57641.629, 92229.957, 147573.868, 236114.122, 377766.903, 604432.388, 967095.799, 1547334.18, 2475745.112, 3961177.467, 6337902.728, 10140605.587, 16224877.322, 25959679.747, 41535531.997, 66456690.656],
+																  fill: "tonexty",
+																  fillcolor: "rgba(68, 68, 68, 0.3)",
+																  line: {color: "rgb(31, 119, 180)"},
+																  mode: "lines",
+																  name: "Mean",
+																  type: "scatter"
+																};
+																var trace3 = {
+																  x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+																  y:  [50.0, 86.0, 140.0, 226.04999999999995, 363.0, 580.05, 927.0999999999999, 1483.1, 2376.1, 3802.5999999999995, 6078.05, 9718.25, 15538.3, 24901.45, 39799.049999999996, 63677.1, 101825.35, 162967.55, 260943.75, 417318.8, 667619.25, 1068687.75, 1709335.65, 2735683.65, 4376301.55, 7002699.300000001, 11204460.85, 17925514.849999998, 28681150.95, 45893094.75, 73432096.75],
+																  fill: "tonexty",
+																  fillcolor: "rgba(68, 68, 68, 0.3)",
+																  line: {width: 0},
+																  marker: {color: "444"},
+																  mode: "lines",
+																  name: "95%",
+																  type: "scatter"
+																};
+																var data = [trace1, trace2, trace3];
+																var layout = {
+																  showlegend: false,
+																  title: "1000 simulations of the qPCR amplification process, X0=50 r=0.6",
+																  xaxis: {title: "Cycle number"},
+																  yaxis: {title: "Copy number"}
+																};
+																Plotly.plot('myDiv', data, layout);
+												        </script>
+																</section> -->
 															<section>
-																<div style="width:600px">
-																	<center>
+																<div id="qpcr" style="width:600px">
+													        <script>
+																	var trace1 = {
+																	  x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+																	  y: [50.0, 74.95, 116.95, 184.0, 291.0, 465.95, 744.0, 1186.9499999999998, 1894.95, 3023.0, 4844.0, 7742.6, 12391.95, 19828.949999999997, 31782.75, 50789.2, 81213.45, 129806.45, 207796.6, 332322.7, 531313.65, 850083.8, 1360470.4, 2175907.2, 3481695.1999999997, 5571200.050000001, 8914055.65, 14264394.85, 22821681.950000003, 36512870.95, 58423810.85],
+																	  line: {width: 0},
+																	  marker: {color: "444"},
+																	  mode: "lines",
+																	  name: "5%",
+																	  type: "scatter"
+																	};
+																	var trace2 = {
+																	   x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+																	   y: [50.0, 79.982, 128.176, 205.029, 327.914, 524.953, 839.757, 1343.638, 2149.538, 3437.077, 5498.262, 8797.505, 14075.599, 22518.673, 36028.401, 57641.629, 92229.957, 147573.868, 236114.122, 377766.903, 604432.388, 967095.799, 1547334.18, 2475745.112, 3961177.467, 6337902.728, 10140605.587, 16224877.322, 25959679.747, 41535531.997, 66456690.656],
+																	  fill: "tonexty",
+																	  fillcolor: "rgba(68, 68, 68, 0.3)",
+																	  line: {color: "rgb(31, 119, 180)"},
+																	  mode: "lines",
+																	  name: "Mean",
+																	  type: "scatter"
+																	};
+																	var trace3 = {
+																	  x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+																	  y:  [50.0, 86.0, 140.0, 226.04999999999995, 363.0, 580.05, 927.0999999999999, 1483.1, 2376.1, 3802.5999999999995, 6078.05, 9718.25, 15538.3, 24901.45, 39799.049999999996, 63677.1, 101825.35, 162967.55, 260943.75, 417318.8, 667619.25, 1068687.75, 1709335.65, 2735683.65, 4376301.55, 7002699.300000001, 11204460.85, 17925514.849999998, 28681150.95, 45893094.75, 73432096.75],
+																	  fill: "tonexty",
+																	  fillcolor: "rgba(68, 68, 68, 0.3)",
+																	  line: {width: 0},
+																	  marker: {color: "444"},
+																	  mode: "lines",
+																	  name: "95%",
+																	  type: "scatter"
+																	};
+																	var data = [trace1, trace2, trace3];
+																	var layout = {
+																	  showlegend: false,
+																	  title: "1000 simulations of the qPCR amplification process, X0=50 r=0.6",
+																	  xaxis: {title: "Cycle number"},
+																	  yaxis: {title: "Copy number"}
+																	};
+																	Plotly.plot('qpcr', data, layout);
+
+												        </script>
+																<p style="margin-right: 10px">Figure:</p>
+															</div>
+
+																<!-- <div style="width:600px">
+
 																	<img src="images/Figure_1.png" alt="" data-position="top center" style="width:550px"/>
 																	<p>Figure:</p>
-																</center>
-																</div>
-																<div class="content">
-																	<div class="inner">
+
+																</div> -->
+																<div class="content"  style="margin-left:100px">
+																	<div class="inner" style="margin-left:50px">
 																		<header class="major">
 																			<h3>Forward Simulation</h3>
 																		</header>
