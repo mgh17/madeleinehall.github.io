@@ -103,14 +103,18 @@
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<div style="width: 520px; margin-left: 0px">
+									<center>
+									<div style="width: 520px; margin-left: 50px">
+
 
 
 										<img src="images/het_thresh_noback.png" alt="" data-position="center center" style="width:520px" />
-										<p style="margin-left: 10px; margin-top: 20px">Figure: Heteroplasmy as a result of replication, and the existence of a biochemical threshold. Figure adapted from <a href="references.html">(Stewart and Chinnery, 2015)</a>.</p>
+
+										<p style="margin-left: 10px; margin-top: 20px">Figure: Heteroplasmy as a result of replication, and the existence of a biochemical threshold. Figure adapted from <a href="references.html">Stewart and Chinnery, 2015</a>.</p>
 
 
 									</div>
+								</center>
 
 
 									<div class="content">
@@ -133,7 +137,8 @@
 									</div>
 								</section>
 								<section>
-									<div style="width:800px;margin-right: 0px">
+									<center>
+									<div style="width:500px;margin-right: 50px">
 										<center>
 										<img src="images/mtdna.png" alt="" data-position="center center" style="width: 500px"/>
 										<img src="images/mtdna_dis.png" alt="" data-position="center center" style="width: 450px"/>
@@ -141,13 +146,14 @@
 										<p style="margin-right: 10px; margin-left: 10px;margin-top: 20px">Figure: Structure of the human mitochondrial genome, and corresponding connections with several human diseases. This picture is adapted from work by <a href="https://commons.wikimedia.org/wiki/User:Shanel" target="_blank">Shanel Kalicharan</a>.</p>
 
 									</div>
+								</center>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
 												<h3>Motivation</h3>
 											</header>
 
-											<p>mtDNA mutations contribute to human disease across a range of severity. Rare, highly penetrant mutations often affect the nervous system, muscles, heart and endocrine organs, whereas mutations that have a milder contribution can result in common complex traits and late-onset disorders <a href="references.html#stewartchinnery">(Stewart and Chinnery, 2015)</a>.
+											<p>mtDNA mutations contribute to human disease across a range of severity. Rare, highly penetrant mutations often affect the nervous system, muscles, heart and endocrine organs, whereas mutations that have a milder contribution can result in common complex traits and late-onset disorders <a href="references.html">(Stewart and Chinnery, 2015)</a>.
 											Furthermore, similar mutational signatures have been observed across cancer types, with mtDNA copy number showing variations within and across cancers in correlation with clinical variables <a href="references.html">(Yuan et al., 2017)</a>.
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
@@ -185,9 +191,16 @@
 									<header class="major">
 										<h2>scRNAseq data</h2>
 									</header>
-									<p> New technology (first published by <a href = references.html>Tang et al. in 2009 </a>) allows genome-wide transcriptome data to be obtained from single cells, through the use of high-throughput sequencing (scRNAseq). Across a population of cells, the distribution of expression levels for each gene are obtained.</p>
-									<p><a href="references.html">Hemberg group</a> ... course on scRNAseq...</p>
-									<p>... ... ... ... This is one approach. However, the bulk of this study concerns the use of qPCR data for quantification of heteroplasmy in mtDNA.</p>
+									<p> New technology (first published by <a href ="references.html">Tang et al. in 2009</a>) allows genome-wide transcriptome data to be obtained from single cells, through the use of high-throughput sequencing (scRNAseq). Across a population of cells, the distribution of expression levels for each gene are obtained. The main advantage of scRNAseq over other methods (e.g. bulk RNA-seq or single-cell real-time qPCR) is that the cellular resolution and the genome wide scope makes it possible to address issues that are intractable using other methods.</p>
+									<center>
+										<img src="images/scRNAseq.jpg" alt="" data-position="center center" style="width: 600px"/>
+										<p>Figure: <a href="" target="_blank"> ...</a>.</p>
+									</center>
+									<p><a href="references.html">Kiselev et al., 2018</a> outline a scRNAseq pipeline that incorporates computational and statistical methods available. The ideal scRNAseq pipeline involves considering experimental design, processing reads, preparing the expression matrix, and interpreting biological analysis. Experimental design is important as it has implications on the biological analysis that can be carried out downstream. As each sequencing library represents a single cell, significant attention has to be paid to comparison of the results from different cells. Discrepencies are introduced due to low starting amounts of transcripts since the RNA comes from one cell only. It is possible to alleviate these issues through normalization and corrections.</p>
+									<p>A main source of discrepancy between the libraries are gene ‘dropouts’, in which a gene is observed at a moderate expression level in one cell but is not detected in another cell <a href="references.html">(Kharchenko, Silberstein, and Scadden 2014)</a>. Dropouts potentially arise because a gene was not expressed in the cell and hence there are no transcripts to sequence. However, dropouts can also be a result of experimental shortcomings: a gene was expressed but transcripts are lost prior to sequencing, or sequencing depth is not sufficient to produce any reads. In the context of mtDNA, as we are unsure of the effects of heteroplasmy on the transcriptome as a whole, this is important to consider.
+									One possible solution to this problem is to impute the dropouts in the expression matrix. Two available imputation methods are MAGIC <a href="references.html">(van Dijk et al. 2017)</a> and scImpute <a href="references.html">(Li et al. 2018)</a>. MAGIC imputes missing expression values by sharing information across similar cells, based on the idea of heat diffusion. scImpute determines which values are affected by dropout events based on a mixture model which learns each gene’s dropout probability in each cell.</p>
+									<p>The scRNAseq techniques described by <a href="references.html">Kiselev et al.</a> can be applied to mitochondria and mtDNA in order to quantify heteroplasmy. Additionally, in order to study the effects that mtDNA heteroplasmy has on nuclear DNA, transcriptomes of cells with varying heteroplasmy can be compared.
+									An alternative approach uses qPCR data for quantification of heteroplasmy in mtDNA, which is the main focus on this project henceforth.</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
@@ -207,7 +220,7 @@
 								</section>
 								<section class="spotlights">
 									<section>
-										<div style="width:350px;margin-left: 20px;margin-top: 10px">
+										<div style="width:350px;margin-left: 50px;margin-top: 10px">
 											<center>
 											<img src="images/het_qpcr.png" alt="" data-position="center center" style="width: 350px"/>
 											<p>Figure: Cell contents are split into two wells, such that half of the contents can be measured with qPCR detecting only mutant mtDNA, and the other half measured with qPCR detecting all mtDNA molecules. </p>

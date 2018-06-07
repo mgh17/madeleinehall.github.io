@@ -85,12 +85,14 @@
 									</header>
 									<p>The qPCR amplification process is stochastic. The process is not completely efficient, it is not the case that each mtDNA molecule is duplicated per cycle. A binomial branching process describes the progression of amplification, and a relationship exists between the number of molecules present and the fluorescence measurement, giving rise to a Hidden Markov Model (HMM). </p>
 								</div>
-								<div>
+								<center>
+								<div style="width:600px">
 									<center>
 										<img src="images/efficiency.png" alt="" data-position="center center" style="width:600px"/>
 										<p>Figure: </p>
 									</center>
 								</div>
+							</center>
 							</section>
 
 
@@ -98,9 +100,12 @@
 
 														<section id="two" class="spotlights">
 															<section>
-																<div style="margin-left: 10px;margin-top:150px">
+
+																<div style="margin-left: 10px;margin-top:150px;width:500px">
+																	<center>
 																	<img src="images/hmm_noback.png" alt="" data-position="center center" style="width:500px"/>
 																	Figure: A binomial branching process describes the hidden markov model for qPCR. The $X_i$ are the number of molecules after each round of qPCR and are 'hidden' states. The $F_i$ are the fluorescence reads and are 'observed' states. Parameters to be inferred are highlighted in red.
+																</center>
 																</div>
 																<div class="content">
 																	<div class="inner">
@@ -109,7 +114,7 @@
 																		</header>
 																		<div style="margin-right:0px">
 
-																		<a href="references.html#lalam">Lalam, 2007</a> proposes a binomial branching process combined with a HMM. It accounts for the fact that the number of replicated DNA molecules during qPCR is random, and additionally that the measurement of the fluorescence emitted by the DNA molecules is collected with some random error.
+																		<a href="references.html">Lalam, 2007</a> proposes a binomial branching process combined with a HMM. It accounts for the fact that the number of replicated DNA molecules during qPCR is random, and additionally that the measurement of the fluorescence emitted by the DNA molecules is collected with some random error.
 
 																		<p>
 																			For all $i\geq1$:
@@ -217,7 +222,9 @@
 																	Plotly.plot('qpcr', data, layout);
 
 												        </script>
+																<center>
 																<p style="margin-right: 10px">Figure:</p>
+															</center>
 															</div>
 
 																<!-- <div style="width:600px">
@@ -279,12 +286,14 @@
 
 																	Plotly.plot('heatmap', data, layout);
 																	</script>
+																	<center>
 																	<p style="margin-left: 10px">Figure:</p>
+																</center>
 																</div>
 																<div class="content">
 																	<div class="inner">
 
-																		<p>The smaller the efficiency $r$, the wider this confidence interval is, meaning there is less certainty of the number of molecules present after a number of cycles. Certainty decreases with each round of qPCR. This can be demonstrated by calculating the coefficient of variation between simulations for varying $X_0$ and $r$ (see Figure ref heatmap).</p>
+																		<p>The smaller the efficiency $r$, the wider this confidence interval is, meaning there is less certainty of the number of molecules present after a number of cycles. Certainty decreases with each round of qPCR. This can be demonstrated by calculating the coefficient of variation between simulations for varying $X_0$ and $r$ (see Figure ref heatmap). For mean $\mu$ and standard deviation $\sigma$, the coefficient of variation is given by $\frac{\sigma}{\mu}$.</p>
 																		<!-- <ul class="actions">
 																			<li><a href="generic.html" class="button">Learn more</a></li>
 																		</ul> -->

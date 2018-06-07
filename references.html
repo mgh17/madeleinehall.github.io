@@ -70,12 +70,16 @@
 									</header>
 									<!-- <span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
 									<ol>
+										<li><a href="https://www.biorxiv.org/content/early/2017/02/25/111591" target="_blank">van Dijk, David, et al. "MAGIC: A diffusion-based imputation method reveals gene-gene interactions in single-cell RNA-sequencing data." BioRxiv (2017): 111591.</a></li>
+										<li><span style="padding-top:0px" id="haario"><a href="https://projecteuclid.org/euclid.bj/1080222083" target="_blank">Haario, Heikki, Eero Saksman, and Johanna Tamminen. "An adaptive Metropolis algorithm." Bernoulli 7.2 (2001): 223-242.</a></span></li>
+										<li><a href="https://www.nature.com/articles/nmeth.2967" target="_blank">Kharchenko, Peter V., Lev Silberstein, and David T. Scadden. "Bayesian approach to single-cell differential expression analysis." Nature methods 11.7 (2014): 740.</a></li>
 										<li><a href="http://hemberg-lab.github.io/scRNA.seq.course/index.html" target="_blank"> Kiselev, Vladimir, et al. "Analysis of single cell RNA-seq data." Hemberg Group | Wellcome Sanger Institute (2018).</a></li>
-										<li><span style="margin-top:-70px; padding-top:55px" id="lalam"><a href="https://www.degruyter.com/view/j/sagmb.2007.6.issue-1/sagmb.2007.6.1.1253/sagmb.2007.6.1.1253.xml" target="_blank">Lalam, Nadia. "Statistical inference for quantitative polymerase chain reaction using a hidden Markov model: a Bayesian approach." Statistical applications in genetics and molecular biology 6.1 (2007).</a></span></li>
+										<li><span style="padding-top:0px" id="lalam"><a href="https://www.degruyter.com/view/j/sagmb.2007.6.issue-1/sagmb.2007.6.1.1253/sagmb.2007.6.1.1253.xml" target="_blank">Lalam, Nadia. "Statistical inference for quantitative polymerase chain reaction using a hidden Markov model: a Bayesian approach." Statistical applications in genetics and molecular biology 6.1 (2007).</a></span></li>
+										<li><a href="https://www.nature.com/articles/s41467-018-03405-7" target="_blank">Li, Wei Vivian, and Jingyi Jessica Li. "An accurate and robust imputation method scImpute for single-cell RNA-seq data." Nature communications 9.1 (2018): 997.</a></li>
 										<li><a href="https://aip.scitation.org/doi/abs/10.1063/1.1699114" target="_blank">Metropolis, Nicholas, et al. "Equation of state calculations by fast computing machines." The journal of chemical physics 21.6 (1953): 1087-1092.</a></li>
-										<li><span style="margin-top:-70px; padding-top:55px" id="stewartchinnery"><a href="https://www.nature.com/articles/nrg3966" target="_blank">Stewart, James B., and Patrick F. Chinnery. "The dynamics of mitochondrial DNA heteroplasmy: implications for human health and disease." Nature Reviews Genetics 16.9 (2015): 530.</a></span></li>
+										<li><span style="padding-top:0px" id="stewartchinnery"><a href="https://www.nature.com/articles/nrg3966" target="_blank">Stewart, James B., and Patrick F. Chinnery. "The dynamics of mitochondrial DNA heteroplasmy: implications for human health and disease." Nature Reviews Genetics 16.9 (2015): 530.</a></span></li>
 										<li><a href="http://www.nature.com/articles/nmeth.1315" target="_blank">Tang, Fuchou, et al. "mRNA-Seq whole-transcriptome analysis of a single cell." Nature methods 6.5 (2009): 377.</a></li>
-										<li><a href="https://www.biorxiv.org/content/early/2017/07/09/161356" target="_blank">Yuan, Yuan, et al. "Comprehensive Molecular Characterization of Mitochondrial Genomes in Human Cancers." bioRxiv (2017): 161356.</a></li>
+										<li><span style="padding-top:0px" id="yuan"><a href="https://www.biorxiv.org/content/early/2017/07/09/161356" target="_blank">Yuan, Yuan, et al. "Comprehensive Molecular Characterization of Mitochondrial Genomes in Human Cancers." bioRxiv (2017): 161356.</a></span></li>
 									</ol>
 
 								</div>
@@ -88,6 +92,10 @@
 									</header>
 									<!-- <span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
 									<dl>
+										<dt><h3>Expression matrix:</h3></dt>
+										<dd>
+											<p>Each row of the expression matrix represents a gene and each column represents a cell (NB: sometimes the transpose is used). Each entry represents the expression level of a particular gene in a given cell. The units by which the expression is meassured depends on the protocol and the normalization strategy used for the data. Many analyses of scRNA-seq data take as their starting point an expression matrix.</p>
+										</dd>
 										<dt><h3>Heteroplasmy:</h3></dt>
 										<dd>
 											<p>The presence of more than one type of organellar genome (mitochondrial DNA or plastid DNA) within a cell or individual. It can be expressed as a ratio $m/(w+m)$, with $m$ the number of mutant DNA molecules present, and $w$ the number of wildtype.</p>
