@@ -159,9 +159,11 @@
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
 									The ability to quantify heteroplasmy in mtDNA is therefore key in studying age-related disease, cancers, and other health issues. </p>
-									<p>Quantitative analysis of mtDNA is challenging in both experimental and computational aspects. Single cell data by nature is concerned with small numbers of molecules. These low copy numbers result in stochasticity, adding complexity to the task of analysis. </p>
+									<p>Absolute vs relative quantification.</p>
 
-									<p>Two different approaches to quantification arise from two types of data: scRNAseq (single-cell RNA sequencing) data, and fluorescence data from qPCR (quantitative PCR).</p>
+									<p>Quantitative analysis of mtDNA is challenging in both experimental and computational aspects. Single cell data by nature is concerned with small numbers of molecules. These low copy numbers result in stochasticity, adding complexity to the task of analysis.
+
+									Two different approaches to quantification arise from two types of data: scRNAseq (single-cell RNA sequencing) data, and fluorescence data from qPCR (quantitative PCR).</p>
 
 
 										</div>
@@ -212,7 +214,7 @@
 									<header class="major">
 										<h2>qPCR data</h2>
 									</header>
-									<p> mtDNA in single cells is present in too low a quantity to be measured and analysed directly. Therefore qPCR is required. qPCR is an experimental technique that amplifies the quantity of a DNA segment, allowing more of the molecule to be available for experimental analysis. It involves repeatedly heating and cooling DNA segments whilst mixing with free nucleotides. Molecule numbers are progressively amplified, and a fluorescence measurement can be obtained for each cycle. This fluorescence measurement indicates the number of molecules present at that point.</p>
+									<p> mtDNA in single cells is present in too low a quantity to be measured and analysed directly. qPCR is an experimental technique that amplifies the quantity of a DNA segment, allowing more of the molecule to be available for experimental analysis in addition to absolute inference of copy number. It involves repeatedly heating and cooling DNA segments whilst mixing with free nucleotides. Molecule numbers are progressively amplified, and a fluorescence measurement can be obtained for each cycle. This fluorescence measurement indicates the number of molecules present at that point. </p>
 									<center>
 										<img src="images/pcr.png" alt="" data-position="center center" style="width: 650px"/>
 										<p>Figure: A simple representation of PCR. At each cycle a DNA molecule is denatured, mixed with primers (red) and free nucleotides (yellow) to form two new DNA strands. The process is 'semi-conservative', as each new DNA molecule consists of one new strand and one original strand that served as the template. After $n$ cycles, one DNA molecule yeilds $2^n$ replicates. This picture is adapted from work by <a href="https://www.khanacademy.org/science/biology/biotech-dna-technology/dna-sequencing-pcr-electrophoresis/a/polymerase-chain-reaction-pcr" target="_blank">Khan Academy</a>.</p>
@@ -226,19 +228,28 @@
 											<p>Figure: Cell contents are split into two wells, such that half of the contents can be measured with qPCR detecting only mutant mtDNA, and the other half measured with qPCR detecting all mtDNA molecules. </p>
 										</center>
 									</div>
-									<div style="margin-top:20px;margin-left:50px;margin-right:20px">
-									<p>Heteroplasmy can be quantified by partitioning mtDNA molecules obtained from a single cell into halves, and performing qPCR on each partition. We can measure the amount of mtDNA present in one partition. In the second partition, we can measure the amount of only the mutated mtDNA present. The ratio of these measurements tells us the level of heteroplasmy.  </p>
-									<p>For equivalent amounts of mtDNA, a family of ampilification curves (see Model) could be generated which would feasibly occur, meaning there is error in qPCR.
-									</p>
-									<p>The standard curve method (ref) has been used extensively to calculate copy number from qPCR data. A series of amplification curves from known parameters are generated, and then compared to amplification curves created from experimentation. This method is simple and effective at yielding approximations to parameters of interest. However, a more sophisticated approach implements Bayesian techniques for parameter inference (see more in Inference).  Another method, the delta-delta ct method, is used in order to calculate the relative fold gene expression of samples from qPCR.
-									</p>
-</div>
+									<div data-position="center center" style="margin-top:150px;margin-left:50px;margin-right:20px">
+									<p>Heteroplasmy can be quantified by partitioning mtDNA molecules obtained from a single cell into two halves, and performing qPCR on each partition. We can measure the amount of mtDNA present in one partition. In the second partition, we can measure the amount of only the mutated mtDNA present. The ratio of these measurements tells us the level of heteroplasmy.  </p>
+
 								</section>
 
 							</section>
 									<section>
 										<div class="inner">
-									<p>...</p>
+											<header class="major">
+												<h3>The Standard Curve Method</h3>
+											</header>
+																				<p>The standard curve method has been used extensively in absolute quantification of parameters from qPCR data. A calibration curve from samples with known properties is constructed. For qPCR data, the standard curve method is known as the comparative $C_T$ method, also referred to as the $2^{-\Delta \Delta C_T}$ or Double Delta Ct method <a href="references.html">(Schmittgen and Livak, 2008)</a>.
+																				</p>
+																				<p>For each standard in a set of samples where the initial number of molecules $X_0$ is known, the cycle number $C_T$ where the fluorescence exceeds a fixed threshold $T$ is recorded. A calibration curve is constructed from the $(X_0,C_T)$ for each standard. The set of standards is often a dilution series, where the initial copy number is progressively diluted in, for example, factors of 10. This results in a linear calibration curve when plotting $\log(X_)$ against $C_T$. </p>
+																				<center>
+
+
+																					<img src="images/stdcurve.png" alt="" data-position="center center" style="width: 500px"/>
+																					<p>Figure: Procedure for constructing of a standard (calibration) curve from a DNA standard. This picture is adapted from work by <a href="http://www.gene-quantification.de/keer-qpcr-book-chapter-7.pdf" target="_blank">Jacquie T. Keer</a>.  </p>
+																				</center>
+																				<p>This method of constructing a calibration curve, and the standard curve method overall, has major disadvantages: it assumes the amplification efficiency is constant, and does not take into account the stochasticity of qPCR (see <a href="model.html">Model</a>). Therefore, a more sophisticated approach is desirable for accurate estimation of $X_0$.</p>
+											</div>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->

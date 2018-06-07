@@ -308,7 +308,11 @@
 																<header class="major">
 																	<h2>Exponential Phase Identification</h2>
 																</header>
-																<p>qPCR data is in the form of fluorescence reads, which reach a saturation point, and also notably have a detection threshold. Therefore we need to discard linear and plateau phases in order for inference with binomial branching model to be successful.</p>
+																<p>qPCR data is in the form of fluorescence reads, which reach a saturation point, and also have a detection threshold. Therefore we need to discard linear and plateau phases in order for inference with binomial branching model to be successful.</p>
+																<p>To identify the exponential phase, two models – a sigmoid curve and an exponential curve – are fitted iteratively. The endmost cycle is progressively discarded from the data until the exponential curve fits ‘better’. Akaike Information Criterion (AIC) is used to determine this ‘better’ fit. The AIC measure considers both number of parameters in the model (an exponential curve uses three parameters, a sigmoid curve four) and the likelihood of the data given the model. For $k$ the number of parameters in a model, and $\hat{L}$ the maximum of the likelihood function for the model $$\text{AIC} = 2k – 2\ln(\hat{L}).$$
+
+For the fluorescence data from single-cell qPCR experiment well 253, the AIC for the exponential model is smaller at cycle 35. Therefore, the first 35 cycles correspond to the exponential phase, and these are used for inference.
+</p>
 																<!-- <ul class="actions">
 																	<li><a href="generic.html" class="button next">Get Started</a></li>
 																</ul> -->
@@ -345,7 +349,7 @@
 																	Plotly.newPlot('exp_phase', data,layout);
 															  </script>
 																<center>
-																<p style="margin-top:10px">Figure:</p>
+																<p style="margin-top:10px">Figure: The exponential phase is identified by using AIC model selection to determine how many cycles need to be discarded from the end prior top inference.</p>
 															</center>
 															</div>
 															</div>
