@@ -93,8 +93,11 @@
 									<header class="major">
 										<h2>Bayesian Inference</h2>
 									</header>
-									Bayes thm. outline relationship between posterior (GOAL), likelihood and prior. <a href="references.html">(Lalam, 2007)</a>.<br>
-									$$ p (\theta | D) = \frac{p(D|\theta)p(\theta)}{p(D)} $$
+									This project adopts a Bayesian approach to inferring parameters of the model outlined previously (see Model). Bayesian inference derives the posterior probability distribution, which describes the probability of $\theta$ the parameter vector, given the data $D$. The posterior is derived from the likelihood function (the likelihood of $D$ given $\theta$), a prior distribution of $\theta$, and an evidence term. Bayes’ theorem yields the relationship between these objects:  $$ p (\theta | D) = \frac{p(D|\theta)p(\theta)}{p(D)} .$$
+									We aim to infer $p(\theta|D)$ the posterior based on $p(D|\theta)$ the likelihood and $ p(\theta)$ the prior, and the marginal likelihood.
+
+									<a href="references.html">(Lalam, 2007)</a>.<br>
+
 
 
 										</div>
