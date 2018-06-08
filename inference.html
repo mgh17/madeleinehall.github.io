@@ -119,7 +119,7 @@
 																										<h3>Metropolis Hastings Algorithm</h3>
 																									</header>
 																									<p>Primarily introduced in 1953 <a href="references.html">(Metropolis et al.)</a> the Metropolis Hastings (MH) algorithm is a MCMC method for obtaining a sequence of random samples from a probability distribution for which direct sampling is difficult. A Markov chain is established and run until stationarity. All subsequent samples are from the stationary distribution, which is the desired posterior distribution. </p>
-																									<p>The Metropolis Hastings algorithm works by generating a sequence of sample values. These sample values are produced iteratively, with the distribution of the next sample being dependent only on the current sample value. Specifically, at each iteration, the algorithm picks a candidate for the next sample value based on the current sample value. Then, with some probability, the candidate is either accepted (in which case the candidate value is used in the next iteration) or rejected (in which case the candidate value is discarded, and current value is reused in the next iteration).</p>
+																									<p>At each iteration, the algorithm generates a candidate for the next sample value based on the current sample value. With probability $\alpha$ (the acceptance ratio), the candidate is either accepted (in which case the candidate value is used in the next iteration) or rejected (in which case the candidate value is discarded, and current value is reused in the next iteration). </p>
 																									<!-- <p>
 																										<ol>
 																										<li> Start with $\theta^{(0)}$, $t=0$ </li>
