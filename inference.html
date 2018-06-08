@@ -107,16 +107,20 @@
 																				<!-- Two -->
 																					<section id="two" class="spotlights">
 																						<section>
-																							<a href="generic.html" class="image">
-																								<img src="images/pic08.jpg" alt="" data-position="center center" />
-																							</a>
+																							<div style="width:500px;margin-top:100px">
+																								<center>
+																								<img src="images/MH_alg.png" alt="" data-position="center center" style="width:500px"/>
+																								<p>Figure: Metropolis Hastings Algorithm </p>
+																							</center>
+																							</div>
 																							<div class="content">
 																								<div class="inner">
 																									<header class="major">
 																										<h3>Metropolis Hastings Algorithm</h3>
 																									</header>
-																									<p>Primarily introduced in 1953 <a href="references.html">(Metropolis et al.)</a></p>
-																									<p>
+																									<p>Primarily introduced in 1953 <a href="references.html">(Metropolis et al.)</a> the Metropolis Hastings (MH) algorithm is a MCMC method for obtaining a sequence of random samples from a probability distribution for which direct sampling is difficult. A Markov chain is established and run until stationarity. All subsequent samples are from the stationary distribution, which is the desired posterior distribution. </p>
+																									<p>The Metropolis Hastings algorithm works by generating a sequence of sample values. These sample values are produced iteratively, with the distribution of the next sample being dependent only on the current sample value. Specifically, at each iteration, the algorithm picks a candidate for the next sample value based on the current sample value. Then, with some probability, the candidate is either accepted (in which case the candidate value is used in the next iteration) or rejected (in which case the candidate value is discarded, and current value is reused in the next iteration).</p>
+																									<!-- <p>
 																										<ol>
 																										<li> Start with $\theta^{(0)}$, $t=0$ </li>
 																										<li> Propose $\theta′$ according to a transition kernel $q(\theta′|\theta^{(t)})$ </li>
@@ -129,7 +133,7 @@
 																										$t = t+1$. Return to step 2.
 																										</li>
 																										</ol>
-																								 </p>
+																								 </p> -->
 																									<!-- <ul class="actions">
 																										<li><a href="generic.html" class="button">Learn more</a></li>
 																									</ul> -->
@@ -145,7 +149,7 @@
 																									<header class="major">
 																										<h3>Adaptive Metropolis Hastings</h3>
 																									</header>
-																									<p><a href="references.html">(Haario et al.)</a>.</p>
+																									<p>To experiment in increasing the efficiency and improving the results from the MH algorithm, we can choose the transition kernel $q$ such that this adapts according to samples from the posterior that have been accepted. The Adaptive Metropolis algorithm updates the transition kernel such that it acquires the shape of the posterior based on samples that have been accepted, allowing perturbations $\theta’$ to follow the same distribution and in theory be better at capturing the posterior as a whole <a href="references.html">(Haario et al.)</a>.</p>
 																									<!-- <ul class="actions">
 																										<li><a href="generic.html" class="button">Learn more</a></li>
 																									</ul> -->
