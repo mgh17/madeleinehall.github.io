@@ -94,7 +94,8 @@
 										<h2>Bayesian Inference</h2>
 									</header>
 									This project adopts a Bayesian approach to inferring parameters of the model outlined previously (see <a href="model.html">Model</a>). Bayesian inference derives a posterior distribution, which describes the probability of $\theta$ the parameter vector given the data $D$. The posterior is derived from the likelihood function (the likelihood of $D$ given $\theta$), a prior distribution of $\theta$, and an evidence term. Bayes’ theorem yields the relationship between these objects:  $$ p (\theta | D) = \frac{p(D|\theta)p(\theta)}{p(D)} .$$
-									We aim to infer $p(\theta|D)$ the posterior based on $p(D|\theta)$ the likelihood and $ p(\theta)$ the prior, and the evidence (marginal likelihood).
+									We aim to infer $p(\theta|D)$ the posterior based on $p(D|\theta)$ the likelihood and $ p(\theta)$ the prior, and the evidence (marginal likelihood).</p>
+									<p>One family of approaches to obtaining the posterior is the class of Markov chain Monte Carlo (MCMC) methods, which construct a Markov chain in order to sample from a probability distribution i.e. the posterior. The Metropolis Hastings algorithm belongs to this family, and is classified as a random walk Monte Carlo method. This is the algorithm implemented in this project to obtain the posterior and infer target parameters. </p>
 
 									<!-- <a href="references.html">(Lalam, 2007)</a>.<br> -->
 
