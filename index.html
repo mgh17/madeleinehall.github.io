@@ -55,8 +55,21 @@
 								<h1>Quantifying Heteroplasmy in mtDNA from Single Cell Data</h1>
 
 							</header>
-							<div class="content">
-								<p> <u>Abstract (NEEDS COMPLETING)</u> <br /> This project is devoted to analysing single cell genetic data and testing models of
+							<!-- Trigger/Open The Modal -->
+							<!-- <button id="myBtn">Lay Summary</button> -->
+
+							<!-- The Modal -->
+							<!-- <div id="myModal" class="modal"> -->
+
+							  <!-- Modal content -->
+							  <!-- <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p>Lay summary here.</p>
+							  </div>
+
+							</div> -->
+							<div class="content" style="width:100%">
+								<p>	 <u>Lay summary</u> Lay summary here <br/> <br/><u>Abstract (NEEDS COMPLETING)</u> This project is devoted to analysing single cell genetic data and testing models of
 mitochondrial population genetics. Inference challenges linked to these data types are explored.<br /> Absolute quantification (as opposed to relative quantification).<br>Project aims:
 </p>
 								<ul class="actions">
@@ -258,6 +271,33 @@ mitochondrial population genetics. Inference challenges linked to these data typ
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+			// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+			</script>
 
 
 	</body>
