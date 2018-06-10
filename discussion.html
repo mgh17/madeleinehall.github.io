@@ -162,7 +162,11 @@
 									<header class="major">
 										<h2>Future Work</h2>
 									</header>
-									In addition to simply running the chains for longer amounts of time, there are other adjustments that can be made which may improve results. Another simple adaptation is to alter the priors. In the inference performed here we simply impose uniform priors upon each of the target parameters. It is possible to make these priors stricter, reducing the interval over which samples may be drawn. Alternatively, other varieties of prior can be considered. Jeffrey's prior is a suitable alternative for the parameters $r$ and $\sigma$. </p>
+									In addition to simply running the chains for longer amounts of time, there are other adjustments that can be made which may improve results. Another simple adaptation is to alter the priors. In the inference performed here we simply impose uniform priors upon each of the target parameters. It is possible to make these priors stricter, reducing the interval over which samples may be drawn. Alternatively, other varieties of prior can be considered. Jeffrey's prior is a suitable alternative for the parameters $r$ and $\sigma$. $p(r)=\text{Beta}(0.5,0.5)$ is a Jeffreys prior and is a common choice for a zero-knowledge prior for a probaility. $p(\sigma) = 1/\sqrt{\sigma}$ is also a common Jeffreys prior choice for a zero-knowledge prior for noise. Alternatively, a useful future improvement would be incorporating experimental knowledge in new priors, and analysing their effect on inferred posterior distributions.  </p>
+									<center>
+										<img src="images/priors.png" alt="" data-position="top center" style="width:100%"/>
+										<p>Figure: This picture is adapted from work by <a href="references.html">Dicu, 2017</a>.</p>
+									</center>
 									<p>Using data from multiple wells to establish r?</p>
 									<p>Parameter pooling?</p>
 
