@@ -180,7 +180,7 @@
 												        </script>
 																</section> -->
 															<section>
-																<div id="qpcr" style="width:600px;margin-left:40px">
+																<div id="qpcr" style="width:600px;margin-left:0px">
 													        <script>
 																	var trace1 = {
 																	  x: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
@@ -223,7 +223,7 @@
 
 												        </script>
 																<center>
-																<p style="margin-right: 10px">Figure:</p>
+																<p style="margin-right:0px">Figure:</p>
 															</center>
 															</div>
 
@@ -233,8 +233,8 @@
 																	<p>Figure:</p>
 
 																</div> -->
-																<div class="content"  style="margin-left:100px">
-																	<div class="inner" style="margin-left:50px">
+																<div class="content">
+																	<div class="inner" style="min-width:50%;margin-left:10px">
 																		<header class="major">
 																			<h3>Forward Simulation</h3>
 																		</header>
@@ -311,12 +311,12 @@
 																<p>qPCR data is in the form of fluorescence reads, which reach a saturation point, and also have a detection threshold. Therefore we need to discard linear and plateau phases in order for inference with binomial branching model to be successful.</p>
 																<p>To identify the exponential phase, two models – a sigmoid curve and an exponential curve – are fitted iteratively. The endmost cycle is progressively discarded from the data until the exponential curve fits ‘better’. Akaike Information Criterion (AIC) is used to determine this ‘better’ fit. The AIC measure considers both number of parameters in the model (an exponential curve uses three parameters, a sigmoid curve four) and the likelihood of the data given the model. For $k$ the number of parameters in a model, and $\hat{L}$ the maximum of the likelihood function for the model $$\text{AIC} = 2k – 2\ln(\hat{L}).$$
 
-For the fluorescence data from single-cell qPCR experiment well 253, the AIC for the exponential model is smaller at cycle 35. Therefore, the first 35 cycles correspond to the exponential phase, and these are used for inference.
+For the fluorescence data from single-cell qPCR experiment 10-3-17 well 253, the AIC for the exponential model is smaller at cycle 35. Therefore, the first 35 cycles correspond to the exponential phase, and these are used for inference.
 </p>
 																<!-- <ul class="actions">
 																	<li><a href="generic.html" class="button next">Get Started</a></li>
 																</ul> -->
-																<div id="exp_phase"><!-- Plotly chart will be drawn inside this DIV -->
+																<div id="exp_phase" style="width:100%"><!-- Plotly chart will be drawn inside this DIV -->
 															  <script>
 																var trace1 = {
 

@@ -15,6 +15,16 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			});
+		</script>
+		<script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+
 
 	</head>
 	<body>
@@ -71,14 +81,35 @@
 						<section id="one">
 							<div class="inner">
 								<header class="major">
-									<!-- <h2>Sed amet aliquam</h2> -->
+									<h2>MCMC Methods</h2>
 								</header>
-								<!-- <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p> -->
+								<p>Metropolis Hastings and other MCMC algorithms are ideal for sampling from multi-dimensional distributions. It is, however, computationally intensive, an unfavourable aspect in addition to the trial and error required (for example, to find an optimal transition kernel). Furthermore, it is difficult to balance the Markov chains mixing and convergence to the posterior. </p>
+								<p>The MH algorithm produces a Markov chain. In order to determine if the algorithm has correctly inferred the posterior, we can inspect traceplots, and autocorrelation functions (ACF). The traceplot, or time series, shows the accepted sample values of the parameter over time (over all iterations). The autocorrelation function indicates how independent different samples from the posterior distribution are – lower autocorrelation indicating more independent results. High autocorrelation indicates that samples drawn don't accurately represent the posterior distribution, and consequently don't provide meaningful information for the solution to the problem. When inspecting the traceplots, three types of mixing behaviour can be observed: the chain can be well mixed, too hot, or too cold:</p>
+								<ul>
+								<li>If the chain is too cold, the samples from the posterior are correlated, and therefore the overall shape of the posterior fails to be captured. The traceplot appears continuous, and the autocorrelation function does not fall to zero.</li>
+			<li>	The Markov chain is described as too hot when the transition kernel is too large, causing bad proposals and a low acceptance rate. The traceplot shows that samples spend extended amounts of time in the same position – this is referred to as a “Manhattan skyline”.</li>
+		<li>		The chain is well mixed when samples are independent and identically distributed when plotted on the posterior. The transition kernel is appropriate in this case, and the traceplot is described as a “fat, hairy caterpillar”.</li>
+
+			</ul>
+						<p>Examples of the three types of mixing behaviour are shown in Figure (INSERT).</p>
 							</div>
+							<div style="width:100%">
+								<center>
+								<img src="images/mixing.png" alt="" data-position="top center" style="width:100%"/>
+
+									<p>Figure: From left to right: traceplot and ACF for chains that are cold, hot, and well mixed.</p>
+								</center>
+
+							</div>
+						<div class="inner">
+					<p>	It is often the case that improvements to the posterior inferred can be obtained by increasing the execution time (or the number of iterations of the MCMC method performed). Extensive computational improvements were made to algorithms throughout this project, including the use of tools such as Cython - a superset of the Python programming language, designed to give C-like performance with code that is written mostly in Python. Despite this, running times throughout the course of this project were exceptionally long. More time is required to experiment with the number of iterations performed and total execution time, in order to establish if this significantly improves results.
+</p>
+</div>
+
 						</section>
 
 					<!-- Two -->
-						<section id="two" class="spotlights">
+						<!-- <section id="two" class="spotlights">
 							<section>
 								<a href="generic.html" class="image">
 									<img src="images/pic08.jpg" alt="" data-position="center center" />
@@ -86,25 +117,28 @@
 								<div class="content">
 									<div class="inner">
 										<header class="major">
-											<h3>Markov Chain Critique</h3>
+											<h3></h3>
 										</header>
 										<!-- <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p> -->
-										<p>Pros and Cons. </p>
-									</div>
+									<!-- </div>
 								</div>
 							</section>
 							<section>
-								<a href="generic.html" class="image">
-									<img src="images/pic09.jpg" alt="" data-position="top center" />
-								</a>
+								<div style="width:100%">
+									<center>
+									<img src="images/pic01.jpg" alt="" data-position="top center" style="width:100%"/>
+
+									</center>
+
+								</div>
 								<div class="content">
 									<div class="inner">
 										<header class="major">
 											<!-- <h3>Rhoncus magna</h3> -->
-										</header>
+										<!-- </header>
 										<!-- <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p> -->
-										<p>Analysis of markov chain mixing. Too cold vs too hot.</p>
-									</div>
+
+									<!-- </div>
 								</div>
 							</section>
 							<section>
@@ -119,8 +153,8 @@
 										<p>HPC/Cython discussion.</p>
 									</div>
 								</div>
-							</section>
-						</section>
+							</section> -->
+						<!-- </section> -->
 
 						<!-- Three -->
 							<section id="three">
@@ -128,12 +162,11 @@
 									<header class="major">
 										<h2>Future Work</h2>
 									</header>
+									In addition to simply running the chains for longer amounts of time, there are other adjustments that can be made which may improve results. Another simple adaptation is to alter the priors. In the inference performed here we simply impose uniform priors upon each of the target parameters. It is possible to make these priors stricter, reducing the interval over which samples may be drawn. Alternatively, other varieties of prior can be considered. Jeffrey's prior is a suitable alternative for the parameters $r$ and $\sigma$. </p>
 									<p>Using data from multiple wells to establish r?</p>
 									<p>Parameter pooling?</p>
-									<p>Priors</p>
-									<p>Uniform vs Jeffery’s</p>
-									<p>Application to ddPCR data
-									</p>
+
+
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
