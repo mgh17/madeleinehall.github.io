@@ -205,7 +205,7 @@
 										 <!-- In the context of mtDNA, as we are unsure of the effects of heteroplasmy on the transcriptome as a whole, this is important to consider. -->
 									One possible solution to this problem is to impute the dropouts in the expression matrix, 'filling in' the missing values and data. Two available imputation methods are MAGIC <a href="references.html">(van Dijk et al. 2017)</a> and scImpute <a href="references.html">(Li et al. 2018)</a>. MAGIC imputes missing expression values by sharing information across similar cells, based on the idea of heat diffusion. scImpute determines which values are affected by dropout events based on a mixture model which learns each gene’s dropout probability in each cell.</p>
 									<p>The scRNAseq techniques described by <a href="references.html">Kiselev et al.</a> can in principal be applied to mitochondria and mtDNA in order to quantify heteroplasmy. Additionally, in order to study the effects that mtDNA heteroplasmy has on nuclear DNA, transcriptomes of cells with varying heteroplasmy can be compared.
-									An alternative approach uses qPCR data for quantification of heteroplasmy in mtDNA, which is the main focus on this project henceforth.</p>
+									An alternative approach uses qPCR data for quantification of heteroplasmy in mtDNA, which is the main focus of this project henceforth.</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
@@ -245,7 +245,7 @@
 											</header>
 																				<p>The standard curve method has been used extensively in absolute quantification of parameters from qPCR data. A calibration curve from samples with known properties is constructed. For qPCR data, the standard curve method is known as the comparative $C_T$ method, also referred to as the $2^{-\Delta \Delta C_T}$ or Double Delta Ct method <a href="references.html">(Schmittgen and Livak, 2008)</a>.
 																				</p>
-																				<p>For each standard in a set of samples where the initial number of molecules $X_0$ is known, the cycle number $C_T$ where the fluorescence exceeds a fixed threshold $T$ is recorded. A calibration curve is constructed from the $(X_0,C_T)$ for each standard. The set of standards is often a dilution series, where the initial copy number is progressively diluted in, for example, factors of 10. This results in a linear calibration curve when plotting $\log(X_)$ against $C_T$. </p>
+																				<p>For each standard in a set of samples where the initial number of molecules $X_0$ is known, the cycle number $C_T$ where the fluorescence exceeds a fixed threshold $T$ is recorded. A calibration curve is constructed from the $(X_0,C_T)$ for each standard. The set of standards is often a dilution series, where the initial copy number is progressively diluted in, for example, factors of 10. This results in a linear calibration curve when plotting $\log(X_0)$ against $C_T$. </p>
 																				<center>
 
 
@@ -265,7 +265,7 @@
 									<header class ="major">
 										<h3>Aims</h3>
 									</header>
-									The primary aim of this project is to perform inference for the model in <a href="references.html">Lalam 2007</a> (see <a href="model.html">Model</a> for more detail) with qPCR data. Secondary to this is to be able to perform inference <i>efficiently</i>, by exploring and experimenting with variations of inference methods (see <a href="inference.html">Inference</a> for more detail). Critical analysis of results will be performed, considering fundamental processes behind the inference algorithms employed.
+									The primary aim of this project is to perform inference for the model in <a href="references.html">Lalam 2007</a> (see <a href="model.html">Model</a> for more detail) with qPCR data. Secondary to this primary aim is to perform inference <i>efficiently</i>, by exploring and experimenting with variations of inference methods (see <a href="inference.html">Inference</a> for more detail). Critical analysis of results will be performed, considering fundamental processes behind the inference algorithms employed.
 							</section>
 
 
