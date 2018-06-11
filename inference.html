@@ -61,6 +61,7 @@
 							<li><a href="discussion.html">Discussion</a></li>
 							<li><a href="summary.html">Summary</a></li>
 							<li><a href="references.html">References & Glossary</a></li>
+								<li><a href="figures.html">Full Results Figures</a></li>
 						</ul>
 						<ul class="actions vertical">
 							<li><a href="#" class="button special fit">Read More</a></li>
@@ -95,12 +96,17 @@
 									</header>
 									This project adopts a Bayesian approach to inferring parameters of the model outlined previously (see <a href="model.html">Model</a>). Bayesian inference derives a posterior distribution, which describes the probability of $\theta$ the parameter vector given the data $D$. The posterior is derived from the likelihood function (the likelihood of $D$ given $\theta$), a prior distribution of $\theta$, and an evidence term. Bayes’ theorem yields the relationship between these objects:  $$ p (\theta | D) = \frac{p(D|\theta)p(\theta)}{p(D)} .$$
 									We aim to infer $p(\theta|D)$ the posterior based on $p(D|\theta)$ the likelihood and $ p(\theta)$ the prior, and the evidence (marginal likelihood).</p>
-									<p>One family of approaches to obtaining the posterior is the class of Markov chain Monte Carlo (MCMC) methods, which construct a Markov chain in order to sample from a probability distribution i.e. the posterior. The Metropolis Hastings algorithm belongs to this family, and is classified as a random walk Monte Carlo method. This is the algorithm implemented in this project to obtain the posterior and infer target parameters. </p>
+									<p>One family of approaches to obtaining the posterior is the class of Markov chain Monte Carlo (MCMC) methods, which construct a Markov chain in order to sample from a probability distribution i.e. the posterior (see Figure 12). The Metropolis Hastings algorithm belongs to this family, and is classified as a random walk Monte Carlo method. This is the algorithm implemented in this project to obtain the posterior and infer target parameters. </p>
 
 									<!-- <a href="references.html">(Lalam, 2007)</a>.<br> -->
-
-
-
+									<center>
+									<div style="width:65%;margin-top:10px;margin-right:10px">
+										<img src="images/MCMC.png" alt="" data-position="top center" style="width:100%"/>
+										<center>
+											<p>Figure 12: Visual representation of Markov chain Monte Carlo (MCMC). We can impose a prior on the parameter to aid inference. In the above example, the Markov chain is run for 10 iterations, until stationarity. All subsequent samples are from the stationary distribution, which is the desired posterior. This picture is adapted from work by <a href="references.html">MPH Stumpf</a>.</p>
+										</center>
+									</div>
+</center>
 										</div>
 							</section>
 
@@ -109,8 +115,8 @@
 																						<section>
 																							<div style="width:45%;margin-top:100px;margin-left:10px">
 																								<center>
-																								<img src="images/MH_alg.png" alt="" data-position="center center" style="width:100%"/>
-																								<p>Figure: Metropolis Hastings Algorithm. </p>
+																								<img src="images/MH_alg.png" alt="" data-position="center center" style="width:100%; border:5px solid rgb(255,255,255); "/>
+																								<p>Figure 13: Metropolis Hastings Algorithm. </p>
 																							</center>
 																							</div>
 																							<div class="content">
@@ -140,27 +146,23 @@
 																								</div>
 																							</div>
 																						</section>
+																					</section>
 																						<section>
-																							<div style="width:55%;margin-top:10px;margin-right:10px">
-																								<img src="images/MCMC.png" alt="" data-position="top center" style="width:100%"/>
-																								<center>
-																									<p>Figure: Visual representation of Markov chain Monte Carlo (MCMC). This picture is adapted from work by <a href="references.html">MPH Stumpf</a>.</p>
-																								</center>
-																							</div>
-																							<div class="content">
+
+
 																								<div class="inner">
 																									<header class="major">
 																										<h3>Adaptive Metropolis Hastings</h3>
 																									</header>
-																									<p>To experiment in increasing the efficiency and improving the results from the MH algorithm, we can choose the transition kernel $q$ such that this adapts according to samples from the posterior that have been accepted. The Adaptive Metropolis (AM) algorithm updates the transition kernel such that it acquires the shape of the posterior based on samples that have been accepted, allowing perturbations $\theta’$ to follow the same distribution and in theory be better at capturing the posterior as a whole <a href="references.html">(Haario et al.)</a>.</p>
+																									<p>To experiment in increasing the computational efficiency and improving the results from the MH algorithm, we can choose the transition kernel $q$ such that this adapts according to samples from the posterior that have been accepted. The Adaptive Metropolis (AM) algorithm updates the transition kernel such that it acquires the shape of the posterior based on samples that have been accepted, allowing perturbations $\theta’$ to follow the same distribution and in theory be better at capturing the posterior as a whole <a href="references.html">(Haario et al.)</a>.</p>
+																									<p>Given a 'burn-in' period of running the MH algorithm (e.g. for 10% of the total number of iterations to be carried out), the AM method computes a covariance matrix from the accepted samples from the posterior, and acquires this as the transition kernel (proposal distribution). With each additional iteration, this covariance matrix is updated based on the sample that was accepted immediately before. Due to the adaptive nature of the process, the AM algorithm is not Markovian. However, it still possesses the desired randomness we seek for our inference algorithm, and may in fact improve convergence to the posterior. </p>
 																									<!-- <ul class="actions">
 																										<li><a href="generic.html" class="button">Learn more</a></li>
 																									</ul> -->
 																								</div>
-																							</div>
+
 																						</section>
 
-																					</section>
 
 																				<!-- Three -->
 																					<!-- <section id="three">

@@ -52,6 +52,7 @@
 								<li><a href="discussion.html">Discussion</a></li>
 								<li><a href="summary.html">Summary</a></li>
 								<li><a href="references.html">References & Glossary</a></li>
+									<li><a href="figures.html">Full Results Figures</a></li>
 							</ul>
 							<ul class="actions vertical">
 								<li><a href="#" class="button special fit">Read More</a></li>
@@ -104,13 +105,13 @@
 							<section id="two" class="spotlights">
 								<section>
 									<center>
-									<div style="width: 520px; margin-left: 50px">
+									<div style="width: 90%; margin-left: 50px">
 
 
 
-										<img src="images/het_thresh_noback.png" alt="" data-position="center center" style="width:520px" />
+										<img src="images/het_thresh_noback.png" alt="" data-position="center center" style="width:100%" />
 
-										<p style="margin-left: 10px; margin-top: 20px">Figure: Heteroplasmy as a result of replication, and the existence of a biochemical threshold. Figure adapted from <a href="references.html">Stewart and Chinnery, 2015</a>.</p>
+										<p style="margin-left: 10px; margin-top: 20px">Figure 1: Heteroplasmy as a result of replication, and the existence of a biochemical threshold. Figure adapted from <a href="references.html">Stewart and Chinnery, 2015</a>.</p>
 
 
 									</div>
@@ -128,7 +129,7 @@
 
 
 											</p>
-											<p>Heteroplasmy is not always harmful, however it has been shown that heteroplasmic mutations of mitochondrial DNA (mtDNA) are an important source of human diseases. A biochemical threshold exists, such that a functional defect occurs only above a certain level of heteroplasmy (e.g. $h = m/(w+m) \geq 0.8$ results in a defect).</p>
+											<p>Heteroplasmy is not always harmful, however it has been shown that heteroplasmic mutations of mtDNA are an important source of human diseases. A biochemical threshold exists, such that a functional defect occurs only above a certain level of heteroplasmy (e.g. $h = m/(w+m) \geq 0.8$ results in a defect). Figure 1 shows two sources of heteroplasmy as a result of replication, and the existence of a biochemical threshold. Vegetative segregation occurs during mitotic cell divisions, and results in daughter cells that contain a random sample of the parent cell's mtDNA. Additionally, individual mtDNAs replicate at random within a cell, making one or more copies at a time while maintaining a relatively constant total number of mtDNAs <a href="references.html">(Chinnery and Samuels, 1999)</a>. </p>
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
@@ -138,12 +139,12 @@
 								</section>
 								<section>
 									<center>
-									<div style="width:500px;margin-right: 50px">
+									<div style="width:90%;margin-right: 50px">
 										<center>
-										<img src="images/mtdna.png" alt="" data-position="center center" style="width: 500px"/>
-										<img src="images/mtdna_dis.png" alt="" data-position="center center" style="width: 450px"/>
+										<img src="images/mtdna.png" alt="" data-position="center center" style="width: 100%"/>
+										<img src="images/mtdna_dis.png" alt="" data-position="center center" style="width: 100%"/>
 									</center>
-										<p style="margin-right: 10px; margin-left: 10px;margin-top: 20px">Figure: Structure of the human mitochondrial genome, and corresponding connections with several human diseases. This picture is adapted from work by <a href="https://commons.wikimedia.org/wiki/User:Shanel" target="_blank">Shanel Kalicharan</a>.</p>
+										<p style="margin-right: 10px; margin-left: 10px;margin-top: 20px">Figure 2: Structure of the human mitochondrial genome, and corresponding connections with several human diseases. This picture is adapted from work by <a href="https://commons.wikimedia.org/wiki/User:Shanel" target="_blank">Shanel Kalicharan</a>.</p>
 
 									</div>
 								</center>
@@ -153,13 +154,13 @@
 												<h3>Motivation</h3>
 											</header>
 
-											<p>mtDNA mutations contribute to human disease across a range of severity. Rare, highly penetrant mutations often affect the nervous system, muscles, heart and endocrine organs, whereas mutations that have a milder contribution can result in common complex traits and late-onset disorders <a href="references.html">(Stewart and Chinnery, 2015)</a>.
+											<p>mtDNA mutations contribute to human disease across a range of severity. The most severe of these mutations often affect the nervous system, muscles, heart and endocrine organs, whereas mutations that have a milder effect can result in common complex traits and late-onset disorders <a href="references.html">(Stewart and Chinnery, 2015)</a>.
 											Furthermore, similar mutational signatures have been observed across cancer types, with mtDNA copy number showing variations within and across cancers in correlation with clinical variables <a href="references.html">(Yuan et al., 2017)</a>.
 											<!-- <ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul> -->
 									The ability to quantify heteroplasmy in mtDNA is therefore key in studying age-related disease, cancers, and other health issues. </p>
-									<p>Quantification can be relative or absolute. In relative quantification, changes in gene expression are analysed in a given sample relative to another reference sample (such as an untreated control sample). In absolute quantification, no known standards are needed. The target of interest can be directly quantified, with precision determined by the number of replicates of the data in question. The goal of this project is absolute quantification of mtDNA, to obtain explicit quanitites of target analytes in order to investigate heteroplasmy and its effects. .</p>
+									<p>Quantification can be relative or absolute. In relative quantification, genetic differences are analysed in a given sample relative to another reference sample (such as an untreated control sample). This yields a dimensionless quantity e.g. a cell posesses 3$\times$ the mtDNA copy number of another. The objective of absolute quantification is to measure quanitites that possess dimensions e.g. a cell possesses a total of 40 mtDNA molecules. Absolute quantification is essential when constructing a mathematical model that aims to describe the world at a fundamental level, as quantities in the world are dimensional. Absolute quantification is in fact a requisite for constraining such mathematical models, furthering our fundamental understanding of processes. If we can achieve fundamental understanding, we can perhaps rationally intervene e.g. reducing heteroplasmy to restore cells to a healthy state. 									 The goal of this project is absolute quantification of mtDNA, to obtain explicit quanitites of target analytes in order to investigate heteroplasmy and its effects.</p>
 
 									<p>Quantitative analysis of mtDNA is challenging in both experimental and computational aspects. Single cell data by nature is concerned with small numbers of molecules. These low copy numbers result in stochasticity, adding complexity to the task of analysis.
 
@@ -193,15 +194,17 @@
 									<header class="major">
 										<h2>scRNAseq data</h2>
 									</header>
-									<p> New technology (first published by <a href ="references.html">Tang et al. in 2009</a>) allows genome-wide transcriptome data to be obtained from single cells, through the use of high-throughput sequencing (scRNAseq). Across a population of cells, the distribution of expression levels for each gene are obtained. The main advantage of scRNAseq over other methods (e.g. bulk RNA-seq or single-cell real-time qPCR) is that the cellular resolution and the genome wide scope makes it possible to address issues that are intractable using other methods.</p>
+									<p> New technology (first published by <a href ="references.html">Tang et al. in 2009</a>) allows genome-wide transcriptome data to be obtained from single cells, through the use of high-throughput sequencing (scRNAseq). Across a population of cells, the distribution of expression levels for each gene are obtained. An advantage of scRNAseq over other methods (e.g. bulk RNA-seq or single-cell real-time qPCR) is the increased cellular resolution and the genome wide scope. At present there is ample scRNAseq data that has yet to be thoroughly explored in the context of absolute quantification of mtDNA. It is intuitive to consider using the transcriptome of a single cell to infer its heteroplasmy, using for instance (sparse) linear regression <a href="references.html">(Murphy, 2012)</a>. Applying techniques for analysing scRNAseq data has the potential to achieve our goal of determining mtDNA heteroplasmy, and therefore understanding how scRNAseq data is processed is key. </p>
 									<center>
 										<img src="images/scRNAseq.jpg" alt="" data-position="center center" style="width: 600px"/>
-										<p>Figure: Single cell RNA sequencing workflow (source: <a href="references.html" target="">Kiselev et al., 2018</a>).</p>
+										<p>Figure 3: Single cell RNA sequencing workflow (source: <a href="references.html" target="">Kiselev et al., 2018</a>).</p>
 									</center>
+									<p>Figure 3 summarizes the overall scRNAseq workflow. RNA obtained from single cell isolation is fragmented, and cDNA is synthesized complementary to these fragments. The cDNA is amplified, forming a sequencing library. Reads are obtained after sequencing has occured. A 'read' refers to the sequence of a section of a unique fragment. A higher number of unique reads of each region of a sequence results in a higher 'sequencing depth'. Expression profiles are obtained through mapping, assigning reads to corresponding transcripts. If an RNA is expressed in high quantities, there will be more reads coming from it.</p>
 									<p><a href="references.html">Kiselev et al., 2018</a> outline a scRNAseq pipeline that incorporates computational and statistical methods available. The ideal scRNAseq pipeline involves considering experimental design, processing reads, preparing the expression matrix, and interpreting biological analysis. Experimental design is important as it has implications on the biological analysis that can be carried out downstream. As each sequencing library represents a single cell, significant attention has to be paid to comparison of the results from different cells. Discrepencies are introduced due to low starting amounts of transcripts since the RNA comes from one cell only. It is possible to alleviate these issues through normalization and corrections.</p>
-									<p>A main source of discrepancy between the libraries are gene ‘dropouts’, in which a gene is observed at a moderate expression level in one cell but is not detected in another cell <a href="references.html">(Kharchenko, Silberstein, and Scadden 2014)</a>. Dropouts potentially arise because a gene was not expressed in the cell and hence there are no transcripts to sequence. However, dropouts can also be a result of experimental shortcomings: a gene was expressed but transcripts are lost prior to sequencing, or sequencing depth is not sufficient to produce any reads. In the context of mtDNA, as we are unsure of the effects of heteroplasmy on the transcriptome as a whole, this is important to consider.
-									One possible solution to this problem is to impute the dropouts in the expression matrix. Two available imputation methods are MAGIC <a href="references.html">(van Dijk et al. 2017)</a> and scImpute <a href="references.html">(Li et al. 2018)</a>. MAGIC imputes missing expression values by sharing information across similar cells, based on the idea of heat diffusion. scImpute determines which values are affected by dropout events based on a mixture model which learns each gene’s dropout probability in each cell.</p>
-									<p>The scRNAseq techniques described by <a href="references.html">Kiselev et al.</a> can be applied to mitochondria and mtDNA in order to quantify heteroplasmy. Additionally, in order to study the effects that mtDNA heteroplasmy has on nuclear DNA, transcriptomes of cells with varying heteroplasmy can be compared.
+									<p>A main source of discrepancy between the libraries are gene ‘dropouts’, in which a gene is observed at a moderate expression level in one cell but is not detected in another cell <a href="references.html">(Kharchenko, Silberstein, and Scadden 2014)</a>. Dropouts potentially arise because a gene was not expressed in the cell and hence there are no transcripts to sequence. However, dropouts can also be a result of experimental shortcomings: a gene was expressed but transcripts are lost prior to sequencing, or sequencing depth is not sufficient to produce any reads.
+										 <!-- In the context of mtDNA, as we are unsure of the effects of heteroplasmy on the transcriptome as a whole, this is important to consider. -->
+									One possible solution to this problem is to impute the dropouts in the expression matrix, 'filling in' the missing values and data. Two available imputation methods are MAGIC <a href="references.html">(van Dijk et al. 2017)</a> and scImpute <a href="references.html">(Li et al. 2018)</a>. MAGIC imputes missing expression values by sharing information across similar cells, based on the idea of heat diffusion. scImpute determines which values are affected by dropout events based on a mixture model which learns each gene’s dropout probability in each cell.</p>
+									<p>The scRNAseq techniques described by <a href="references.html">Kiselev et al.</a> can in principal be applied to mitochondria and mtDNA in order to quantify heteroplasmy. Additionally, in order to study the effects that mtDNA heteroplasmy has on nuclear DNA, transcriptomes of cells with varying heteroplasmy can be compared.
 									An alternative approach uses qPCR data for quantification of heteroplasmy in mtDNA, which is the main focus on this project henceforth.</p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
@@ -216,16 +219,16 @@
 									</header>
 									<p> mtDNA in single cells is present in too low a quantity to be measured and analysed directly. qPCR is an experimental technique that amplifies the quantity of a DNA segment, allowing more of the molecule to be available for experimental analysis in addition to absolute inference of copy number. It involves repeatedly heating and cooling DNA segments whilst mixing with free nucleotides. Molecule numbers are progressively amplified, and a fluorescence measurement can be obtained for each cycle. This fluorescence measurement indicates the number of molecules present at that point. </p>
 									<center>
-										<img src="images/pcr.png" alt="" data-position="center center" style="width: 650px"/>
-										<p>Figure: A simple representation of PCR. At each cycle a DNA molecule is denatured, mixed with primers (red) and free nucleotides (yellow) to form two new DNA strands. The process is 'semi-conservative', as each new DNA molecule consists of one new strand and one original strand that served as the template. After $n$ cycles, one DNA molecule yeilds $2^n$ replicates. This picture is adapted from work by <a href="https://www.khanacademy.org/science/biology/biotech-dna-technology/dna-sequencing-pcr-electrophoresis/a/polymerase-chain-reaction-pcr" target="_blank">Khan Academy</a>.</p>
+										<img src="images/pcr.png" alt="" data-position="center center" style="width: 60%"/>
+										<p>Figure 4: A simple representation of PCR. At each cycle a DNA molecule is denatured, mixed with primers (red) and free nucleotides (yellow) to form two new DNA strands. The process is 'semi-conservative', as each new DNA molecule consists of one new strand and one original strand that served as the template. After $n$ cycles, one DNA molecule yields $2^n$ replicates. This picture is adapted from work by <a href="https://www.khanacademy.org/science/biology/biotech-dna-technology/dna-sequencing-pcr-electrophoresis/a/polymerase-chain-reaction-pcr" target="_blank">Khan Academy</a>.</p>
 									</center>
 								</section>
 								<section class="spotlights">
 									<section>
 										<div style="width:350px;margin-left: 50px;margin-top: 10px">
 											<center>
-											<img src="images/het_qpcr.png" alt="" data-position="center center" style="width: 350px"/>
-											<p>Figure: Cell contents are split into two wells, such that half of the contents can be measured with qPCR detecting only mutant mtDNA, and the other half measured with qPCR detecting all mtDNA molecules. </p>
+											<img src="images/het_qpcr.png" alt="" data-position="center center" style="max-width: 350px"/>
+											<p>Figure 5: Cell contents are split into two wells, such that half of the contents can be measured with qPCR detecting only mutant mtDNA, and the other half measured with qPCR detecting all mtDNA molecules. </p>
 										</center>
 									</div>
 									<div data-position="center center" style="margin-top:150px;margin-left:50px;margin-right:20px">
@@ -247,9 +250,9 @@
 
 
 																					<img src="images/stdcurve.png" alt="" data-position="center center" style="width: 60%"/>
-																					<p>Figure: Procedure for constructing of a standard (calibration) curve from a DNA standard. This picture is adapted from work by <a href="http://www.gene-quantification.de/keer-qpcr-book-chapter-7.pdf" target="_blank">Jacquie T. Keer</a>.  </p>
+																					<p>Figure 6: Procedure for constructing of a standard (calibration) curve from a DNA standard. This picture is adapted from work by <a href="http://www.gene-quantification.de/keer-qpcr-book-chapter-7.pdf" target="_blank">Jacquie T. Keer</a>.  </p>
 																				</center>
-																				<p>This method of constructing a calibration curve, and the standard curve method overall, has major disadvantages: it assumes the amplification efficiency is constant, and does not take into account the stochasticity of qPCR (see <a href="model.html">Model</a>). Therefore, a more sophisticated approach is desirable for accurate estimation of $X_0$.</p>
+																				<p>This method of constructing a calibration curve, and the standard curve method overall, has major disadvantages: it assumes the amplification efficiency is constant, and does not take into account the stochasticity of qPCR (see <a href="model.html">Model</a>). Therefore, a more sophisticated approach is desirable for accurate estimation of $X_0$, especially in the limit of small copy numbers as is our circumstance.</p>
 
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>

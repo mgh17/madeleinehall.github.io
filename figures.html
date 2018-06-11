@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Figures - Subcellular Genetic Populations</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" async
+  	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			});
+		</script>
+		<script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style1">
+						<a href="index.html" class="logo"><strong>Subcellular Genetic Populations</strong> <span>Madeleine Hall</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+					<!-- Menu -->
+						<nav id="menu">
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="background.html">Background</a></li>
+								<li><a href="model.html">Model</a></li>
+								<li><a href="inference.html">Inference</a></li>
+								<li><a href="results.html">Results</a></li>
+								<li><a href="discussion.html">Discussion</a></li>
+								<li><a href="summary.html">Summary</a></li>
+								<li><a href="references.html">References & Glossary</a></li>
+									<li><a href="figures.html">Full Results Figures</a></li>
+							</ul>
+							<ul class="actions vertical">
+								<li><a href="#" class="button special fit">Read More</a></li>
+
+							</ul>
+						</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Figures</h1>
+									</header>
+									 <p>MH algorithm implemented on data from single-cell qPCR experiment 10-3-17 well 253. Marginal posteriors, trace plots and ACF figures are included here. For discussion and analysis of the Markov chain please see <a href="discussion.html">Discussion</a>.</p>
+
+									 <center>
+									 	<ul class="actions">
+									 		<li><a href="#MH" class="button next scrolly">MH 10,000 iterations</a></li>
+									 	</ul>
+									 </center>
+									 <center>
+									 	<ul class="actions">
+									 		<li><a href="#MH100k" class="button next scrolly">MH 100,000 iterations</a></li>
+									 	</ul>
+									 </center>
+									 <center>
+									 	<ul class="actions">
+									 		<li><a href="#NEWPRIORMH" class="button next scrolly">MH 10,000 iterations, p(X0)=U(0,100)</a></li>
+									 	</ul>
+									 </center>
+									 <center>
+									 	<ul class="actions">
+									 		<li><a href="#AM100k" class="button next scrolly">AM 100,000 iterations</a></li>
+									 	</ul>
+									 </center>
+
+
+
+									 <center>
+		 								<ul class="actions">
+		 									<li><a href="results.html" class="button scrolly">Return to results</a></li>
+		 								</ul>
+		 							</center>
+								</div>
+							</section>
+
+					</div>
+
+					<section id="MH">
+
+						<div class="inner">
+							<header class="major">
+								<h2>Metropolis Hastings 10,000 iterations</h2>
+							</header>
+							<p>
+							<h3>$X_0$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/MH/X0_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH/X0_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH/X0_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+							<p>
+							<h3>$r$:</h3>
+						</p>
+							<div class="row">
+								<div class="column">
+									<img src="images/MH/r_marginal.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/MH/r_mixing.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/MH/r_autocorrelation.png" alt="" style="width:100%">
+								</div>
+							</div>
+
+							<p>
+							<h3>$\alpha$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/MH/alpha_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH/alpha_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH/alpha_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$\sigma$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/MH/sigma_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH/sigma_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH/sigma_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>Scatter plot of accepted $X_0$ and $r$ from the posterior:</h3>
+						</p>
+<center>
+						<img src="images/MH/x0_r.png">
+					</center>
+
+
+					</div>
+					<div class="inner">
+						<ul class="actions">
+							<center>
+							<li><a href="results.html" class="button">return to Results</a></li>
+						</center>
+						</ul>
+					</div>
+					</section>
+
+					<section id="MH100k">
+						<div class="inner">
+							<header class="major">
+								<h2>Metropolis Hastings 100,000 iterations</h2>
+							</header>
+							<p>
+							<h3>$X_0$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/MH_100k/X0_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH_100k/X0_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH_100k/X0_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$r$:</h3>
+						</p>
+							<div class="row">
+								<div class="column">
+									<img src="images/MH_100k/r_marginal.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/MH_100k/r_mixing.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/MH_100k/r_autocorrelation.png" alt="" style="width:100%">
+								</div>
+							</div>
+
+							<p>
+							<h3>$\alpha$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/MH_100k/alpha_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH_100k/alpha_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH_100k/alpha_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$\sigma$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/MH_100k/sigma_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH_100k/sigma_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/MH_100k/sigma_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+							<p>
+							<h3>Scatter plot of accepted $X_0$ and $r$ from the posterior:</h3>
+						</p>
+<center>
+
+						<img src="images/MH_100k/x0_r.png">
+					</center>
+
+<div>
+					<center>
+
+					 <ul class="actions">
+						 <li><a href="results.html" class="button scrolly" style="margin-top:100px">Return to results</a></li>
+					 </ul>
+				 </center>
+
+			 </div>
+			 </div>
+
+
+
+
+					</section>
+
+
+					<section id="NEWPRIORMH">
+						<div class="inner">
+							<header class="major">
+								<h2>Prior $p(X_0)=U(0,100)$</h2>
+							</header>
+							<p>
+							<h3>$X_0$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/X0_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/X0_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/X0_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$r$:</h3>
+						</p>
+							<div class="row">
+								<div class="column">
+									<img src="images/NEWPRIOR_MH/r_marginal.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/NEWPRIOR_MH/r_mixing.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/NEWPRIOR_MH/r_autocorrelation.png" alt="" style="width:100%">
+								</div>
+							</div>
+
+							<p>
+							<h3>$\alpha$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/alpha_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/alpha_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/alpha_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$\sigma$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/sigma_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/sigma_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/NEWPRIOR_MH/sigma_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+							<p>
+							<h3>Scatter plot of accepted $X_0$ and $r$ from the posterior:</h3>
+						</p>
+<center>
+
+						<img src="images/NEWPRIOR_MH/x0_r.png">
+					</center>
+
+
+					<div>
+										<center>
+
+										 <ul class="actions">
+											 <li><a href="results.html" class="button scrolly" style="margin-top:100px">Return to results</a></li>
+										 </ul>
+									 </center>
+
+								 </div>
+
+
+
+
+						</div>
+					</section>
+
+					<section id="AM100k">
+						<div class="inner">
+							<header class="major">
+								<h2>Adaptive Metropolis algorithm 100,000 iterations</h2>
+							</header>
+							<p>
+							<h3>$X_0$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/AM_100k/X0_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/AM_100k/X0_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/AM_100k/X0_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$r$:</h3>
+						</p>
+							<div class="row">
+								<div class="column">
+									<img src="images/AM_100k/r_marginal.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/AM_100k/r_mixing.png" alt="" style="width:100%">
+								</div>
+								<div class="column">
+									<img src="images/AM_100k/r_autocorrelation.png" alt="" style="width:100%">
+								</div>
+							</div>
+
+							<p>
+							<h3>$\alpha$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/AM_100k/alpha_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/AM_100k/alpha_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/AM_100k/alpha_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+
+							<p>
+							<h3>$\sigma$:</h3>
+						</p>
+							<div class="row">
+							  <div class="column">
+							    <img src="images/AM_100k/sigma_marginal.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/AM_100k/sigma_mixing.png" alt="" style="width:100%">
+							  </div>
+							  <div class="column">
+							    <img src="images/AM_100k/sigma_autocorrelation.png" alt="" style="width:100%">
+							  </div>
+							</div>
+							<p>
+							<h3>Scatter plot of accepted $X_0$ and $r$ from the posterior:</h3>
+						</p>
+<center>
+
+						<img src="images/AM_100k/x0_r.png">
+					</center>
+
+
+
+						</div>
+					</section>
+
+
+												<section id="next">
+													<div class="inner">
+														<ul class="actions">
+															<center>
+															<li><a href="results.html" class="button">return to Results</a></li>
+														</center>
+														</ul>
+													</div>
+												</section>
+
+
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+					<center>
+
+						<!-- <ul class="icons">
+							<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul> -->
+						<ul class="copyright">
+							<li>&copy; 2017 Madeleine Hall</li><li>Imperial College London</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							<li> <span class="icon alt fa-envelope"> </span> <a href="mailto:madeleine.hall17@imperial.ac.uk">madeleine.hall17@imperial.ac.uk</a>
+						</ul>
+					</center>
+
+					</div>
+
+				</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -52,6 +52,7 @@
 								<li><a href="results.html">Results</a></li>
 								<li><a href="summary.html">Summary</a></li>
 								<li><a href="references.html">References & Glossary</a></li>
+									<li><a href="figures.html">Full Results Figures</a></li>
 							</ul>
 							<ul class="actions vertical">
 								<li><a href="#" class="button special fit">Read More</a></li>
@@ -84,20 +85,20 @@
 									<h2>MCMC Methods</h2>
 								</header>
 								<p>Metropolis Hastings and other MCMC algorithms are ideal for sampling from multi-dimensional distributions. It is, however, computationally intensive, an unfavourable aspect in addition to the trial and error required (for example, to find an optimal transition kernel). Furthermore, it is difficult to balance the Markov chains mixing and convergence to the posterior. </p>
-								<p>The MH algorithm produces a Markov chain. In order to determine if the algorithm has correctly inferred the posterior, we can inspect traceplots, and autocorrelation functions (ACF). The traceplot, or time series, shows the accepted sample values of the parameter over time (over all iterations). The autocorrelation function indicates how independent different samples from the posterior distribution are – lower autocorrelation indicating more independent results. High autocorrelation indicates that samples drawn don't accurately represent the posterior distribution, and consequently don't provide meaningful information for the solution to the problem. When inspecting the traceplots, three types of mixing behaviour can be observed: the chain can be well mixed, too hot, or too cold:</p>
+								<p>The MH algorithm produces a Markov chain. In order to determine if the algorithm has correctly inferred the posterior, we can inspect trace plots, and autocorrelation functions (ACF). The trace plot, or time series, shows the accepted sample values of the parameter over time (over all iterations). The autocorrelation function indicates how independent different samples from the posterior distribution are – lower autocorrelation indicating more independent results. High autocorrelation indicates that samples drawn don't accurately represent the posterior distribution, and consequently don't provide meaningful information for the solution to the problem. When inspecting the trace plots, three types of mixing behaviour can be observed: the chain can be well mixed, too hot, or too cold:</p>
 								<ul>
-								<li>If the chain is too cold, the samples from the posterior are correlated, and therefore the overall shape of the posterior fails to be captured. The traceplot appears continuous, and the autocorrelation function does not fall to zero.</li>
-			<li>	The Markov chain is described as too hot when the transition kernel is too large, causing bad proposals and a low acceptance rate. The traceplot shows that samples spend extended amounts of time in the same position – this is referred to as a “Manhattan skyline”.</li>
-		<li>		The chain is well mixed when samples are independent and identically distributed when plotted on the posterior. The transition kernel is appropriate in this case, and the traceplot is described as a “fat, hairy caterpillar”.</li>
+								<li>If the chain is too cold, the samples from the posterior are correlated, and therefore the overall shape of the posterior fails to be captured. The trace plot appears continuous, and the autocorrelation function does not fall to zero.</li>
+			<li>	The Markov chain is described as too hot when the transition kernel is too large, causing bad proposals and a low acceptance rate. The trace plot shows that samples spend extended amounts of time in the same position – this is referred to as a “Manhattan skyline”.</li>
+		<li>		The chain is well mixed when samples are independent and identically distributed when plotted on the posterior. The transition kernel is appropriate in this case, and the trace plot is described as a “fat, hairy caterpillar”.</li>
 
 			</ul>
-						<p>Examples of the three types of mixing behaviour are shown in Figure (INSERT).</p>
+						<p>Examples of the three types of mixing behaviour are shown in Figure 18.</p>
 							</div>
 							<div style="width:100%">
 								<center>
 								<img src="images/mixing.png" alt="" data-position="top center" style="width:100%"/>
 
-									<p>Figure: From left to right: traceplot and ACF for chains that are cold, hot, and well mixed.</p>
+									<p>Figure 18: Examples of different types of behaviour that Markov chains can exhibit. From left to right: trace plot and ACF for chains that are cold, hot, and well mixed.</p>
 								</center>
 
 							</div>
@@ -160,17 +161,17 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Future Work</h2>
+										<h2>Future Work and Outlook</h2>
 									</header>
-									In addition to simply running the chains for longer amounts of time, there are other adjustments that can be made which may improve results. Another simple adaptation is to alter the priors. In the inference performed here we simply impose uniform priors upon each of the target parameters. It is possible to make these priors stricter, reducing the interval over which samples may be drawn. Alternatively, other varieties of prior can be considered. Jeffrey's prior is a suitable alternative for the parameters $r$ and $\sigma$. $p(r)=\text{Beta}(0.5,0.5)$ is a Jeffreys prior and is a common choice for a zero-knowledge prior for a probaility. $p(\sigma) = 1/\sqrt{\sigma}$ is also a common Jeffreys prior choice for a zero-knowledge prior for noise. Alternatively, a useful future improvement would be incorporating experimental knowledge in new priors, and analysing their effect on inferred posterior distributions.  </p>
+									In addition to simply running the chains for longer amounts of time, there are other adjustments that can be made which may improve results. Another simple adaptation is to alter the priors. In the inference performed here we simply impose uniform priors upon each of the target parameters. It is possible to make these priors stricter, reducing the interval over which samples may be drawn. Alternatively, other varieties of prior can be considered. Jeffrey's prior is a suitable alternative for the parameters $r$ and $\sigma$. $p(r)=\text{Beta}(0.5,0.5)$ is a Jeffreys prior and is a common choice for a zero-knowledge prior for a probability. $p(\sigma) = 1/\sqrt{\sigma}$ is also a common Jeffreys prior choice for a zero-knowledge prior for noise. Alternatively, a useful future improvement would be incorporating experimental knowledge in new priors, and analysing their effect on inferred posterior distributions.  </p>
 									<center>
 										<img src="images/priors.png" alt="" data-position="top center" style="width:100%"/>
-										<p>Figure: This picture is adapted from work by <a href="references.html">Dicu, 2017</a>.</p>
+										<p>Figure 19: This picture is adapted from work by <a href="references.html">Dicu, 2017</a>.</p>
 									</center>
-									<p>An additional further development would be to incorporate data from multiple wells measured in the single cell experiment. Each seperate well would possess a different value for $X_0$, however we can adopt the assumption that $r$ and $\sigma$ are shared between the different wells within the same experiment.
+									<p>An additional further development would be to incorporate data from multiple wells measured in the single cell experiment. Each separate well would possess a different value for $X_0$, however we can adopt the assumption that $r$ and $\sigma$ are shared between the different wells within the same experiment.
 						Using data from multiple fluorescence curves should theoretically result in more accurate inference of $r$ (and potentially $\sigma$).</p>
-						<p>The analysis and investigation carried out in this project has the potential for application to other forms of data, in particular ddPCR (droplet digital PCR). MCMC methods have been implemented on ddPCR data with promise <a href="references.html">(Wilson and Ellison, 2016)</a>, and further investigation of this has not yet been explored extensively.</p>
-
+						<p>The analysis and investigation carried out in this project has the potential for application to other forms of data, in particular ddPCR (droplet digital PCR). MCMC methods have been implemented on ddPCR data with promise <a href="references.html">(Wilson and Ellison, 2016)</a>, and further investigation of this has not yet been explored extensively.
+The research and analysis carried out in this project has provided in-depth conceptual understanding of Bayesian inference and MCMC methods, in particular the Metropolis Hastings algorithm. Performing this form of analysis is applicable to a wide range of different types of datasets. Programming frameworks such as <a href="http://docs.pymc.io/notebooks/getting_started" target="_blank">PyMC3</a> and <a href="http://mc-stan.org/" target="_blank">Stan</a> provide tools to perform the types of analysis and inference discussed in this project, in addition to many other analysis methods. </p>
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button next">Get Started</a></li>
 									</ul> -->
